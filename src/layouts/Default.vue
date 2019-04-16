@@ -47,6 +47,10 @@ body {
   line-height: 1.5;
 }
 
+.layout {
+  overflow: hidden;
+}
+
 .layout-container {
   max-width: 1120px;
   margin: 0 auto;

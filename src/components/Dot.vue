@@ -1,0 +1,11 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><g fill="#fff" stroke="#707070" stroke-width="5"><circle cx="14" cy="14" r="14" stroke="none"/><circle cx="14" cy="14" r="11.5" fill="none"/></g></svg>
+</template>
+
+<script>
+export default {
+    name: 'Dot'
+}
+</script>
+
+

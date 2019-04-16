@@ -11,7 +11,7 @@
                     <g-link class="nav_link" to="/about">Our Mission</g-link>
                     <g-link class="nav_link" to="/pricing">Pricing</g-link>
                     <g-link class="nav_link" to="/features">Features</g-link>
-                    <a class="nav_link" href="https://app.traxit.io/login">Login</a>
+                    <a class="nav_link login-btn" href="https://app.traxit.io/login">Login</a>
                 </nav>
             </div>
         </div>
@@ -51,6 +51,7 @@ export default {
     color: var(--darkgray);
     align-self: center;
     margin-left: 35px;
+    font-size: 1.25rem;
 }
 
 .logo {
@@ -83,7 +84,7 @@ header {
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;
-    height: 55px;
+    height: 70px;
 }
 
 .navbar-links {
@@ -96,6 +97,21 @@ nav {
 
 .toggle-nav-btn {
     display: none;
+}
+
+.login-btn {
+  background: var(--white);
+  border: .5px solid var(--darkgray);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 var(--darkgray);
+  color: var(--main);
+  padding: 2px 10px;
+  margin-left: 35px;
+  transition: background 1s;
+}
+
+.login-btn:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1160px) {
