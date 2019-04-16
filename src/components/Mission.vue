@@ -5,19 +5,19 @@
             <h2 class="mission-header">Our Mission</h2>
             <div class="mission-statement">
                 <div>
-                    <dot></dot>
+                    <dot class="dot"></dot>
                 </div>
                 <p class="mission-text">We believe that to take your business to the next level, and make better decisions for the future you need an application that will provide you the ability to manage, track, assign and report on whatever the job may be.</p>
             </div>
             <div class="mission-statement">
                 <div>
-                    <dot></dot>
+                    <dot class="dot"></dot>
                 </div>
                 <p class="mission-text">We want to impower you with the ability to manage what's important with our simple, intuitive practice management software.</p>
             </div>
             <div class="mission-statement">
                 <div>
-                    <dot></dot>
+                    <dot class="dot"></dot>
                 </div>
                 <p class="mission-text">TRAXIT, built by individuals who have experience in the industry understand that finding a tool that will meet the needs of your firm can be difficult and we hope that our solution will resolve this issue.</p>
             </div>
@@ -75,6 +75,12 @@ export default {
         margin-top: 0;
         font-size: 1.25rem;
         margin-left: 10px;
+    }
+
+    .dot {
+        width: 20px;
+        height: auto;
+        margin-top: 5px;
     }
 
     @media screen and (max-width: 767px) {

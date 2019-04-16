@@ -7,10 +7,15 @@
 
 module.exports = {
   siteName: 'TRAXIT',
-  chainWebpack (config) {
-    config.mode('development')
-  },
-  
+
+    chainWebpack: config => {
+      const svgRule = config.module.rule('svg')
+      svgRule.uses.clear()
+      svgRule
+        .use('vue-svg-loader')
+        .loader('vue-svg-loader')
+    },
+
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

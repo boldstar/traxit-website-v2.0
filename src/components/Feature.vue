@@ -4,9 +4,6 @@
             <h2 class="feature-header">{{ title }}</h2>
             <p class="feature-text">{{ text }}</p>
         </div>
-        <div class="feature-svg">
-            <div v-html="svg"></div>
-        </div>
     </div>
 </template>
 
@@ -19,5 +16,17 @@ export default {
 </script>
 
 <style>
-    
+    .feature-details {
+        max-width: 400px;
+    }
+
+    .feature-header {
+        font-size: 2rem;
+        margin-bottom: 0;
+        color: var(--darkgray);
+    }
+
+    .feature-text {
+        margin-top: 0;
+    }
 </style>
