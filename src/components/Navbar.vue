@@ -102,12 +102,13 @@ nav {
 .login-btn {
   background: var(--white);
   border: .5px solid var(--darkgray);
-  border-radius: 5px;
-  box-shadow: 0 0 5px 0 var(--darkgray);
+  border-radius: 2px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.25);
   color: var(--main);
   padding: 2px 10px;
   margin-left: 35px;
   transition: background 1s;
+  font-size: 1rem;
 }
 
 .login-btn:hover {
