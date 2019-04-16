@@ -12,19 +12,22 @@
       </div>
     </section>
     <Mission />
+    <Features />
   </Layout>
 </template>
 
 <script>
 import HeroImg from '@/components/HeroImg.vue'
 import Mission from '@/components/Mission.vue'
+import Features from '@/components/Features.vue'
 export default {
   metaInfo: {
     title: 'Practice Management'
   },
   components: {
     HeroImg,
-    Mission
+    Mission,
+    Features
   }
 }
 </script>

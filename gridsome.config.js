@@ -7,6 +7,10 @@
 
 module.exports = {
   siteName: 'TRAXIT',
+  chainWebpack (config) {
+    config.mode('development')
+  },
+  
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
