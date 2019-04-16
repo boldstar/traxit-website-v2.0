@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="hero">
-      <img src="../../static/hero.png" alt="hero background image" class="hero-background">
+      <img src="../../static/hero2.png" alt="hero background image" class="hero-background">
       <div class="hero-content">
         <div class="hero-details">
           <h1 class="hero-title">Firm Practice</h1>
@@ -52,8 +52,10 @@ export default {
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-height: calc(100vh - 55px);
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .hero-details {
@@ -89,17 +91,16 @@ export default {
 
 .hero-img {
   position:absolute;
-  right: 100px;
-  top: 30%;
   height: auto;
-  max-width: 1000px; 
+  max-width: 1000px;
+  right: 100px;
+  top: 150px; 
 }
 
 @media screen and (max-width: 1730px) {
   .hero-img {
-    right: 100px;
-    top: 30%;
     max-width: 700px; 
+    top: 200px;
   }
 }
 
@@ -112,6 +113,7 @@ export default {
 @media screen and (max-width: 1150px) {
   .hero-img {
     max-width: 500px;
+    right: 50px;
   }
 
   .hero-title {
@@ -121,6 +123,10 @@ export default {
 
   .hero-btn {
     margin-top: 25px;
+  }
+
+  .hero-details {
+    margin-left: 35px;
   }
 }
 
@@ -139,6 +145,7 @@ export default {
 
   .hero-details {
     align-items: center;
+    margin-left: 0;
   }
 
   .hero-btn {

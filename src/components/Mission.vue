@@ -43,7 +43,7 @@ export default {
         right: 0;
         top: 200px;
         height: auto;
-        width: 800px;
+        max-width: 800px;
         z-index: -100;
     }
 
@@ -51,6 +51,8 @@ export default {
         width: 100%;
         position: relative;
         padding: 50px 20px;
+        max-width: 1120px;
+        margin: 0 auto;
     }
 
     .mission-content {
@@ -69,6 +71,7 @@ export default {
     .mission-statement {
         display: flex;
         margin-bottom: 30px;
+        text-overflow: wrap;
     }
 
     .mission-text {
@@ -83,11 +86,17 @@ export default {
         margin-top: 5px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1160px) {
         .mission {
             padding: 0;
         }
 
+        .mission-statement {
+            padding: 0 20px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
         .mission-text {
             font-size: 1rem;
         }

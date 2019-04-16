@@ -57,8 +57,6 @@ export default {
     .features {
         background-color: var(--lightgray);
         width: 100%;
-        position: absolute;
-        left: 0;
     }
 
     .features-content {

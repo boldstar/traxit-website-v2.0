@@ -65,6 +65,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    background-color: var(--lightgray);
 }
 
 .navbar-sticky {

@@ -8,6 +8,7 @@
         </main>
       </transition>
     </div>
+    <Contact />
   </div>
 </template>
 
@@ -21,10 +22,12 @@ query {
 
 <script>
 import Navbar from '@/components/Navbar.vue'
+import Contact from '@/components/Contact.vue'
 export default {
   name: 'Default',
   components: {
-    Navbar
+    Navbar,
+    Contact
   }
 }
 </script>
@@ -52,14 +55,12 @@ body {
 }
 
 .layout-container {
-  max-width: 1120px;
-  margin: 0 auto;
+  position: relative;
+  width: 100vw;
 }
 
 @media screen and (max-width: 1160px) { 
-  .layout-container {
-    padding: 0 35px!important;
-  }
+
 }
 
 .fade-enter-active {
