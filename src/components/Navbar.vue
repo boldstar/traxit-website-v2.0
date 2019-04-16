@@ -1,7 +1,7 @@
 <template>
     <header class="header" id="navbar">
         <div class="navbar">
-            <g-link class="nav_link logo">TRAXIT</g-link>
+            <g-link class="nav_link logo" to="/">TRAXIT</g-link>
 
             <div class="navbar-links" :class="{'collapsed-navbar-links': toggle}">
                 <button class="toggle-nav-btn" type="button" @click="toggleNavbar"><i class="fas fa-bars"></i></button>

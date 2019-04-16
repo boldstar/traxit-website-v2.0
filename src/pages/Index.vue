@@ -60,15 +60,18 @@ export default {
 
 .hero-details {
   display: flex;
+  position: absolute;
+  left: 250px;
+  top: 200px;
   flex-direction: column;
   margin-bottom: 50px;
 }
 
 .hero-title {
   color: var(--darkgray);
-  font-size: 4rem;
+  font-size: 5rem;
   margin: 0;
-  height: 60px;
+  height: 80px;
 }
 
 .hero-btn {
@@ -98,9 +101,18 @@ export default {
 }
 
 @media screen and (max-width: 1730px) {
+  .hero-details {
+    left: 100px;
+  }
+
   .hero-img {
     max-width: 700px; 
     top: 200px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    height: 60px;
   }
 }
 
@@ -126,7 +138,7 @@ export default {
   }
 
   .hero-details {
-    margin-left: 35px;
+    left: 35px;
   }
 }
 
@@ -144,6 +156,7 @@ export default {
   }
 
   .hero-details {
+    position: static;
     align-items: center;
     margin-left: 0;
   }
