@@ -3,4 +3,4 @@ title: Reports
 excerpt: This is the excerpt for the dashboard feature
 ---
 
-Your MSP should be monitoring your systems at all times and if required should be available to you out of office hours. If you need something, they should be on-call for you and available for questions, concerns, or feedback.
+The ability to run reports is another great tool for making decisions. One example would be to know the amount of a certain tax returns were processed in the year 2018.

@@ -19,12 +19,12 @@
                 <Feature :title="'Tasks'" :text="'This is great to keep everyone informed on what is needed to be done. And more specifically what each team member has assigned. Each team member will have there own tasks. Each task is related to the processing of an engagement.'" />
             </div>
             <div class="features-layout">
-                <Feature :title="'Manage'" :text="'We wanted this took to be flexible so you have the ability to manage your own workflows, team members, and reports all from the admin dashboard. Only abled to be view by admins, this will be only accessed to those you choose to allow.'" />
+                <Feature :title="'Manage'" :text="'We wanted this tool to be flexible so you have the ability to manage your own workflows, team members, and reports all from the admin dashboard. Only abled to be view by admins, this will be only accessed to those you choose to allow.'" />
                 <Manage class="svg" />
             </div>
             <div class="features-layout">
                 <Reports class="svg" />
-                <Feature :title="'Reports'" :text="'The ability to run reports is another great tool for making decisions. One example would be to know the amount of a certain tax returns were processed in the year 2018'" />
+                <Feature :title="'Reports'" :text="'The ability to run reports is another great tool for making decisions. One example would be to know the amount of a certain tax returns were processed in the year 2018.'" />
             </div>
         </div>
     </section>
