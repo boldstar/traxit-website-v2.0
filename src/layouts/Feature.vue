@@ -1,5 +1,6 @@
 <template>
   <div class="feature-layout">
+    <div class="feature-layout-background"></div>
     <Navbar id="navbar"/>
     <div class="feature-layout-container">
       <Sidebar />
@@ -53,17 +54,36 @@ body {
   line-height: 1.5;
 }
 
+.feature-layout-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--lightgray);
+  height: 50vh;
+  width: 100%;
+  z-index: -1;
+}
+
 .features-main {
-  background-color: var(--white);
+  background-color: var(--white)!important;
   box-shadow: 0 1px 10px rgba(0,0,0,250);
   margin-top: 20px;
   position: relative;
   z-index: 1;
+  border-radius: 5px;
+  min-height: calc(100vh - 300px);
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.features-main::-webkit-scrollbar {
+  width: 0!important;
 }
 
 .feature-layout {
   overflow: hidden;
-  background: var(--lightgray);
 }
 
 .feature-layout-container {

@@ -57,6 +57,7 @@ export default {
     align-items: flex-start;
     background-color: var(--lightgray);
     padding: 10px;
+    align-self: flex-start;
   }
 
   .sidebar-btn {
@@ -69,11 +70,13 @@ export default {
     padding-left: 0;
     padding-right: 0;
     background: var(--lightgray);
+    width: 175px;
   }
 
   .feature-link-li {
     margin-bottom: 5px;
-    padding-left: 15px;
+    padding-left: 0;
+    margin-right: 15px;
     width: 100%;
   }
 
@@ -82,10 +85,13 @@ export default {
     color: var(--darkgray);
     font-weight: bold;
     font-size: 1.25rem;
+    width: 100%;
   }
 
   .active-link {
     color: var(--main);
+    padding: 5px;
+    width: 100%;
   }
 
   .feature-category {
