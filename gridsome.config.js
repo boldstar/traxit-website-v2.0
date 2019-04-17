@@ -31,7 +31,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'service/**/*.md',
+        path: 'feature/**/*.md',
         typeName: 'Post',
         remark: {
 
