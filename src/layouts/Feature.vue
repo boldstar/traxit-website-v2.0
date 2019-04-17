@@ -11,6 +11,7 @@
       </transition>
     </div>
     <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -26,12 +27,14 @@ query {
 import Navbar from '@/components/Navbar.vue'
 import Contact from '@/components/Contact.vue'
 import Sidebar from '@/components/Sidebar.vue'
+import Footer from '@/components/Footer.vue'
 export default {
   name: 'Default',
   components: {
     Navbar,
     Contact,
-    Sidebar
+    Sidebar,
+    Footer
   }
 }
 </script>

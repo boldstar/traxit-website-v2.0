@@ -70,6 +70,10 @@ header {
     z-index: 1000;
 }
 
+.active--exact {
+    color: var(--main);
+}
+
 .navbar-sticky {
     position: fixed;
     top: 0;
