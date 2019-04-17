@@ -2,27 +2,27 @@
     <section class="features">
         <div class="features-content">
             <h2 class="features-header">Features</h2>
-            <div class="feature-layout">
+            <div class="features-layout">
                 <Feature :title="'Dashboard'" :text="'Giving a visual representation of the data you have flowing through your firm or business is great for quick decision making and a high level overview of what is happening'" />
                 <Dashboard class="svg" />
             </div>
-            <div class="feature-layout">
+            <div class="features-layout">
                 <Workflow class="svg" />
                 <Feature :title="'Workflows'" :text="'The backbone of this tool is workflows. They are meant to process and track the status of engagements. Essentially they can be used for anything that requires steps to complete but for a CPA firm this might be tax returns, or bookkeeping'" />
             </div>
-            <div class="feature-layout">
+            <div class="features-layout">
                 <Feature :title="'Engagements'" :text="'Engagements are what is being processed. For instance if you do a 1040 tax return, that would be considered an engagement. Consider it to be the connection between you and your clients. Each engagement will also contains specific details and questions that can be viewed at anytime.'" />
                 <Folder class="svg" />
             </div>
-            <div class="feature-layout">
+            <div class="features-layout">
                 <Tasks  class="svg" />
                 <Feature :title="'Tasks'" :text="'This is great to keep everyone informed on what is needed to be done. And more specifically what each team member has assigned. Each team member will have there own tasks. Each task is related to the processing of an engagement.'" />
             </div>
-            <div class="feature-layout">
+            <div class="features-layout">
                 <Feature :title="'Manage'" :text="'We wanted this took to be flexible so you have the ability to manage your own workflows, team members, and reports all from the admin dashboard. Only abled to be view by admins, this will be only accessed to those you choose to allow.'" />
                 <Manage class="svg" />
             </div>
-            <div class="feature-layout">
+            <div class="features-layout">
                 <Reports class="svg" />
                 <Feature :title="'Reports'" :text="'The ability to run reports is another great tool for making decisions. One example would be to know the amount of a certain tax returns were processed in the year 2018'" />
             </div>
@@ -58,7 +58,7 @@ export default {
         background-color: var(--lightgray);
         width: 100%;
         position: relative;
-        z-index: 1;
+        z-index: 0;
     }
 
     .features-content {
@@ -74,7 +74,7 @@ export default {
         margin: 10px auto;
     }
 
-    .feature-layout {
+    .features-layout {
         display: flex;
         justify-content: space-around;
         margin: 20px auto;
@@ -83,7 +83,7 @@ export default {
     }
 
     @media screen and (max-width: 1232px) {
-        .feature-layout {
+        .features-layout {
             padding: 0;
         }
     }
@@ -96,7 +96,7 @@ export default {
             align-items: center;
         }
 
-        .feature-layout {
+        .features-layout {
             flex-direction: column;
             align-items: center;
             background-color: var(--white);
@@ -107,7 +107,7 @@ export default {
             overflow: hidden;
         }
 
-        .feature-layout:nth-of-type(odd) {
+        .features-layout:nth-of-type(odd) {
             flex-direction: column-reverse;
         }
 

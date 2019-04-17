@@ -69,10 +69,6 @@ main {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1160px) { 
-
-}
-
 .fade-enter-active {
   transition: opacity 1.5s;
 }

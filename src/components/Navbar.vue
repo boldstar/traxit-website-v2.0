@@ -66,6 +66,8 @@ header {
     justify-content: space-between;
     width: 100%;
     background-color: var(--lightgray);
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar-sticky {

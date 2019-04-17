@@ -62,7 +62,7 @@ export default {
         display: flex;
         flex-direction: column;
         position: relative;
-        z-index: 1000;
+        z-index: 0;
     }
 
     .mission-header {
