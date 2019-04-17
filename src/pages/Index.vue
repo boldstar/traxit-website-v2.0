@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="hero">
-      <img src="../../static/hero2.png" alt="hero background image" class="hero-background">
+      <img src="../../static/hero.png" alt="hero background image" class="hero-background">
       <div class="hero-content">
         <div class="hero-details">
           <h1 class="hero-title">Firm Practice</h1>

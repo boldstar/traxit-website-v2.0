@@ -40,6 +40,12 @@ export default {
         }
     }
 
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
     
     .markdown-body {
 		box-sizing: border-box;
