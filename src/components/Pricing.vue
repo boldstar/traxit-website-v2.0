@@ -99,6 +99,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
+    padding-left: 0;
 }
 
 ul {

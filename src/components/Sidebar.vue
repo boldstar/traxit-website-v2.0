@@ -4,8 +4,8 @@
        Toggle
       </button>
       <div class="feature-list" :class="{'show-links': toggle}">
-        <ul>
-          <li v-for="feature in features" :key="feature.id" @click="toggle = false">
+        <ul class="feature-list-links">
+          <li class="feature-link-li" v-for="feature in features" :key="feature.id" @click="toggle = false">
             <g-link class="features-link" :to="feature.node.path" :class="{'active-link' : feature.node.path == $route.path}">{{ feature.node.title }}</g-link>
           </li>
         </ul>
@@ -63,14 +63,15 @@ export default {
     display: none;
   }
 
-  ul {
+  .feature-list-links {
     list-style: none;
     text-align: right;
     padding-left: 0;
     padding-right: 0;
+    background: var(--lightgray);
   }
 
-  li {
+  .feature-link-li {
     margin-bottom: 5px;
     padding-left: 15px;
     width: 100%;

@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <Mission />
+        <Mission class="mission-component" />
     </Layout>
 </template>
 
@@ -14,4 +14,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.mission-component {
+    position: relative;
+    z-index: -1000;
+}
+</style>
+
 

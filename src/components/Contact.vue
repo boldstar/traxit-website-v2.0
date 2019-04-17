@@ -26,7 +26,7 @@ export default {
 <style>
     .contact {
         width: 100%;
-        position: static;
+        position: relative;
         margin-bottom: 50px;
         background: var(--white);
     }

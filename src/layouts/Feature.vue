@@ -4,7 +4,7 @@
     <div class="feature-layout-container">
       <Sidebar />
       <transition name="fade" appear>
-        <main>
+        <main class="features-main">
           <slot/>
         </main>
       </transition>
@@ -53,8 +53,12 @@ body {
   line-height: 1.5;
 }
 
-main {
+.features-main {
   background-color: var(--white);
+  box-shadow: 0 1px 10px rgba(0,0,0,250);
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .feature-layout {
