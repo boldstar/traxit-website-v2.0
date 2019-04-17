@@ -44,7 +44,7 @@ export default {
         top: 200px;
         height: auto;
         max-width: 800px;
-        z-index: -100;
+        z-index: 0;
     }
 
     .mission {
@@ -53,6 +53,7 @@ export default {
         padding: 50px 20px;
         max-width: 1120px;
         margin: 0 auto;
+        background: transparent;
     }
 
     .mission-content {
@@ -60,6 +61,8 @@ export default {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: 1000;
     }
 
     .mission-header {

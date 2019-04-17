@@ -28,6 +28,7 @@ export default {
         width: 100%;
         position: static;
         margin-bottom: 50px;
+        background: var(--white);
     }
 
     .contact-content {

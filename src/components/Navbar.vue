@@ -10,7 +10,7 @@
                     <g-link class="nav_link" to="/">Home</g-link>
                     <g-link class="nav_link" to="/about">Our Mission</g-link>
                     <g-link class="nav_link" to="/pricing">Pricing</g-link>
-                    <g-link class="nav_link" to="/features">Features</g-link>
+                    <g-link class="nav_link" to="/feature/dashboard-feature">Features</g-link>
                     <a class="nav_link login-btn" href="https://app.traxit.io/login">Login</a>
                 </nav>
             </div>

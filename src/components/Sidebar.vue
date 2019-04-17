@@ -5,7 +5,7 @@
       </button>
       <div class="feature-list" :class="{'show-links': toggle}">
         <ul>
-          <li v-for="feature in $static.features.edges" :key="feature.id" @click="toggle = false">
+          <li v-for="feature in features" :key="feature.id" @click="toggle = false">
             <g-link class="features-link" :to="feature.node.path" :class="{'active-link' : feature.node.path == $route.path}">{{ feature.node.title }}</g-link>
           </li>
         </ul>
@@ -35,6 +35,11 @@ export default {
         toggle: false
       }
     },
+    computed: {
+        features() {
+            return this.$static.features.edges.slice().reverse()
+        }
+    },
     methods: {
       toggleSidebar() {
         this.toggle = !this.toggle
@@ -54,11 +59,6 @@ export default {
     padding: 10px;
   }
 
-  .microchip {
-    width: 100px;
-    margin: 0 auto;
-  }
-
   .sidebar-btn {
     display: none;
   }
@@ -74,10 +74,6 @@ export default {
     margin-bottom: 5px;
     padding-left: 15px;
     width: 100%;
-  }
-
-  .title:focus {
-    outline: none;
   }
 
   .features-link {
@@ -99,14 +95,6 @@ export default {
 @media screen and (max-width: 767px) {
   .features-link {
     font-size: .8rem;
-  }
-
-  .microchip {
-    display: none;
-  }
-
-  .title {
-    font-size: 1rem;
   }
 
   .sidebar {

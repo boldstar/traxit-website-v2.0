@@ -1,7 +1,7 @@
 <template>
-  <div class="layout">
+  <div class="feature-layout">
     <Navbar id="navbar"/>
-    <div class="layout-container">
+    <div class="feature-layout-container">
       <Sidebar />
       <transition name="fade" appear>
         <main>
@@ -53,11 +53,16 @@ body {
   line-height: 1.5;
 }
 
-.layout {
-  overflow: hidden;
+main {
+  background-color: var(--white);
 }
 
-.layout-container {
+.feature-layout {
+  overflow: hidden;
+  background: var(--lightgray);
+}
+
+.feature-layout-container {
   position: relative;
   display: flex;
   max-width: 1120px;
