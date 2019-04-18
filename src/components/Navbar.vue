@@ -1,7 +1,7 @@
 <template>
     <header class="header" id="navbar">
         <div class="navbar">
-            <g-link class="nav_link logo" to="/">TRAXIT</g-link>
+            <g-link class="nav_link logo" to="/"><Compass /></g-link>
 
             <div class="navbar-links" :class="{'collapsed-navbar-links': toggle}">
                 <button class="toggle-nav-btn" type="button" @click="toggleNavbar"><i class="fas fa-bars"></i></button>
@@ -19,12 +19,16 @@
 </template>
 
 <script>
+import Compass from '@/components/Compass.vue'
 export default {
     name: 'Navbar',
     data() {
         return {
             toggle: false
         }
+    },
+    components: {
+        Compass
     },
     methods: {
         toggleNavbar() {
@@ -131,6 +135,7 @@ nav {
 @media screen and (max-width: 767px) {
     .navbar {
         padding-right: 0!important;
+        padding-left: 20px!important;
     }
 
     .collapsed-nav {

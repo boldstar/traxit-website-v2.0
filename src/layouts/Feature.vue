@@ -74,8 +74,8 @@ body {
   position: relative;
   z-index: 1;
   border-radius: 5px;
-  min-height: calc(100vh - 300px);
-  max-height: 100vh;
+  min-height: calc(100vh - 125px);
+  max-height: calc(100vh - 125px);
   overflow-y: scroll;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;

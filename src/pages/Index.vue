@@ -4,7 +4,19 @@
       <img src="../../static/hero.png" alt="hero background image" class="hero-background">
       <div class="hero-content">
         <div class="hero-details">
-          <h1 class="hero-title">Firm Practice</h1>
+          <vue-typer
+            :text='["Firm Practice", "Workflows", "Tax Returns", "Bookkeeping"]'
+            :repeat='Infinity'
+            :shuffle='false'
+            initial-action='typing'
+            :pre-type-delay='70'
+            :type-delay='70'
+            :pre-erase-delay='2000'
+            :erase-delay='70'
+            erase-style='backspace'
+            :erase-on-complete='false'
+            caret-animation='blink'
+          ></vue-typer>
           <h1 class="hero-title">Management</h1>
           <button class="hero-btn">Request Demo</button>
         </div>
@@ -20,6 +32,7 @@
 import HeroImg from '@/components/HeroImg.vue'
 import Mission from '@/components/Mission.vue'
 import Features from '@/components/Features.vue'
+import { VueTyper } from 'vue-typer'
 export default {
   metaInfo: {
     title: 'Practice Management'
@@ -27,12 +40,20 @@ export default {
   components: {
     HeroImg,
     Mission,
-    Features
+    Features,
+    VueTyper
   }
 }
 </script>
 
-<style scoped>
+<style>
+
+.vue-typer {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+  height: 80px;
+}
 
 .hero {
   overflow: hidden;
@@ -68,7 +89,7 @@ export default {
 }
 
 .hero-title {
-  color: var(--darkgray);
+  color: black;
   font-size: 5rem;
   margin: 0;
   height: 80px;
@@ -110,6 +131,13 @@ export default {
     top: 200px;
   }
 
+  .vue-typer {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 0;
+      height: 60px;
+    }
+
   .hero-title {
     font-size: 4rem;
     height: 60px;
@@ -126,6 +154,13 @@ export default {
   .hero-img {
     max-width: 500px;
     right: 50px;
+  }
+
+  .vue-typer {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    height: 55px;
   }
 
   .hero-title {
@@ -169,6 +204,13 @@ export default {
 @media screen and (max-width: 450px) {
   .hero-title {
     font-size: 2.5rem;
+    height: 40px;
+  }
+
+  .vue-typer {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
     height: 40px;
   }
 }
