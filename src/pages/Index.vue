@@ -4,6 +4,7 @@
       <img src="../../static/hero.png" alt="hero background image" class="hero-background">
       <div class="hero-content">
         <div class="hero-details">
+          <ClientOnly>
           <vue-typer
             :text='["Firm Practice", "Workflows", "Tax Returns", "Bookkeeping"]'
             :repeat='Infinity'
@@ -17,6 +18,7 @@
             :erase-on-complete='false'
             caret-animation='blink'
           ></vue-typer>
+          </ClientOnly>
           <h1 class="hero-title">Management</h1>
           <button class="hero-btn">Request Demo</button>
         </div>
@@ -33,7 +35,7 @@
 import HeroImg from '@/components/HeroImg.vue'
 import Mission from '@/components/Mission.vue'
 import Features from '@/components/Features.vue'
-import { VueTyper } from 'vue-typer'
+
 export default {
   metaInfo: {
     title: 'Practice Management'
@@ -42,7 +44,10 @@ export default {
     HeroImg,
     Mission,
     Features,
-    VueTyper
+    VueTyper: () => 
+    import ('vue-typer')
+    .then( m => m.VueTyper)
+    .catch()
   }
 }
 </script>
