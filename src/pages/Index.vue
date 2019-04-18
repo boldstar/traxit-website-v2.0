@@ -21,6 +21,7 @@
           <button class="hero-btn">Request Demo</button>
         </div>
         <HeroImg class="hero-img" />
+        <g-image src="../../static/mobile_hero_illustration.png" class="mobile-hero"></g-image>
       </div>
     </section>
     <Mission />
@@ -47,6 +48,10 @@ export default {
 </script>
 
 <style>
+
+.mobile-hero {
+  display: none;
+}
 
 .vue-typer {
   font-size: 5rem;
@@ -178,12 +183,24 @@ export default {
 }
 
 @media screen and (max-width: 925px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    min-height: calc(100vh - 50px);
+  }
+
   .hero-background {
     display: none;
   }
 
   .hero-img {
     display: none;
+  }
+
+  .mobile-hero {
+    display: block;
+    width: 300px;
+    height: 300px;
+    position: relative;
   }
 
   .hero-content {
