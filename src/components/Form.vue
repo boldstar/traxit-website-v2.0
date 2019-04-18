@@ -1,6 +1,6 @@
 <template>
   <form 
-    name="free_network_assessment"
+    name="free_demo_form"
     method="post"
     v-on:submit.prevent="handleSubmit"
     action="/success/"

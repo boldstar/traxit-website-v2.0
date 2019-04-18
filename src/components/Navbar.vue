@@ -1,7 +1,7 @@
 <template>
     <header class="header" id="navbar">
         <div class="navbar">
-            <g-link class="nav_link logo" to="/"><Compass /></g-link>
+            <g-link class="nav_link logo" to="/"><Logo /></g-link>
 
             <div class="navbar-links" :class="{'collapsed-navbar-links': toggle}">
                 <button class="toggle-nav-btn" type="button" @click="toggleNavbar"><i class="fas fa-bars"></i></button>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Compass from '@/components/Compass.vue'
+import Logo from '@/components/Logo.vue'
 export default {
     name: 'Navbar',
     data() {
@@ -28,7 +28,7 @@ export default {
         }
     },
     components: {
-        Compass
+        Logo
     },
     methods: {
         toggleNavbar() {
