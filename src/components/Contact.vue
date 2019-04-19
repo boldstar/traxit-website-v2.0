@@ -92,7 +92,8 @@ export default {
     }
 
     .contact-details {
-      max-width: 300px;
+      width: 90%;
+        text-align: center;
     }
 
     .contact-details-header {
