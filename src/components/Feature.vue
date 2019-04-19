@@ -3,7 +3,7 @@
         <div class="feature-details">
             <h2 class="feature-header">{{ title }}</h2>
             <p class="feature-text">{{ text }}</p>
-            <g-link to="/" class="feature-link">Read More</g-link>
+            <g-link :to="link" class="feature-link">Read More</g-link>
         </div>
     </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 export default {
     name: 'Feature',
-    props: ['title', 'text']
+    props: ['title', 'text', 'link']
 
 }
 </script>

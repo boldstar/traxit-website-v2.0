@@ -188,10 +188,12 @@ nav {
     .nav_link {
         margin-right: 0;
         align-self: flex-end;
+        margin-bottom: 10px;
     }
 
     .logo {
         align-self: center!important;
+        margin-bottom: 0!important;
     }
 }
 
