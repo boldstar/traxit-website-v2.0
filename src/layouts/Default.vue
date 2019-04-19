@@ -62,10 +62,6 @@ body {
   width: 100vw;
 }
 
-@media screen and (max-width: 1160px) { 
-
-}
-
 .fade-enter-active {
   transition: opacity 1.5s;
 }

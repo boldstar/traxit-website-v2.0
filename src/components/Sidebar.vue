@@ -1,10 +1,10 @@
 <template>
     <div class="sidebar" :class="{'sidebar-collapsed': toggle}">
-      <button class="sidebar-btn" type="button" @click="toggleSidebar">
-       Toggle
-      </button>
-      <div class="feature-list" :class="{'show-links': toggle}">
-        <ul class="feature-list-links">
+      <div class="feature-list">
+        <button class="sidebar-btn" type="button" @click="toggleSidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="feature-list-links"  :class="{'show-links': toggle}">
           <li class="feature-link-li" v-for="feature in features" :key="feature.id" @click="toggle = false">
             <g-link class="features-link" :to="feature.node.path" :class="{'active-link' : feature.node.path == $route.path}">{{ feature.node.title }}</g-link>
           </li>
@@ -102,13 +102,15 @@ export default {
 @media screen and (max-width: 767px) {
   .features-link {
     font-size: .8rem;
+    padding-top: 0;
   }
 
   .sidebar {
     width: 20px;
+    transition: width .2s;
   }
 
-  .feature-list {
+  .feature-list-links {
     display: none;
   }
 
@@ -119,6 +121,13 @@ export default {
     cursor: pointer!important;
     z-index: 2;
     padding: 0;
+    position: absolute;
+    left: 10px;
+    background-color: var(--white);
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: .5px solid var(--main);
+    top: 20px;
   }
 
   .btn-icon {
@@ -131,12 +140,16 @@ export default {
   }
 
   .sidebar-collapsed {
-    width: 300px!important;
+    width: 100px!important;
+    position: relative;
+    transition: width .2s;
   }
 
   .show-links {
     display: flex;
     flex-direction: column;
+    width: 100px!important;
+    margin-top: 5px;
   }
 }
 </style>

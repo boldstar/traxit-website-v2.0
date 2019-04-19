@@ -104,4 +104,10 @@ body {
   opacity: 0;
 }
 
+@media screen and (max-width: 1140px) {
+  .feature-layout-container {
+    padding-right: 35px;
+  }
+}
+
 </style>

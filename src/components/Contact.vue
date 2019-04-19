@@ -92,7 +92,7 @@ export default {
     }
 
     .contact-details {
-      width: 90%;
+        width: 90%;
         text-align: center;
     }
 

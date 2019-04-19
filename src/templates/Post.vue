@@ -56,10 +56,15 @@ export default {
         font-weight: bold;
 	}
 
-	@media (max-width: 767px) {
+	@media (max-width: 850px) {
 		.markdown-body {
 			padding: 15px;
-      font-size: .8rem;
+            font-size: .8rem;
+            padding-top: 0!important;
 		}
+
+        .post-title {
+            margin-bottom: 0;
+        }
 	}
 </style>

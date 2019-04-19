@@ -143,12 +143,15 @@ nav {
     }
 
     .toggle-nav-btn {
-        display: block;
+        display: flex;
         align-self: center;
         background: transparent;
         margin-right: 35px;
         border: none;
-        font-size: 1.15rem;
+        font-size: 1.35rem;
+        position: relative;
+        right: -5px;
+        top: 3px;
         cursor: pointer;
         color: var(--darkgray);
     }
@@ -162,10 +165,10 @@ nav {
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
-        width: 150px;
+        width: 200px;
         padding: 10px;
         position: absolute;
-        top: 25px;
+        top: 35px;
         right: 35px;
         border: 1px solid var(--lightgray);
         border-radius: 5px;
