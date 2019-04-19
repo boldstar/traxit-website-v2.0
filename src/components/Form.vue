@@ -174,7 +174,7 @@ export default {
 
   @media screen and (max-width: 458px) {
     form {
-      max-width: 300px;
+      width: 90%;
     }
   }
 </style>
