@@ -34,14 +34,17 @@
       <label for="phone">Phone Number</label>
       <input type="text" name="phone" v-model="formData.phone" :class="{'input-error': error}" @change="error = false"/>
     </div>
-  <button type="submit" class="form-btn">Submit</button>
+  <button type="submit" class="form-btn" :disabled="sending">
+    <span v-if="!sending">Submit</span>
+    <span v-if="sending">Submiting...</span>
+  </button>
 
 
 </form>
 </template>
 
 <script>
-
+import {EventBus} from '~/utils/event.js'
 export default {
   name: 'Form',
   props: ['slogan'],
@@ -49,7 +52,8 @@ export default {
     return {
       formData: {},
       success: false,
-      error: false
+      error: false,
+      sending: false
     }
   },
  methods: {
@@ -59,6 +63,7 @@ export default {
       .join('&')
   },
   handleSubmit(e) {
+    this.sending = true
     if(this.formData.business_name == '' || this.formData.business_name == null) {
       this.error = true 
       return;
@@ -88,9 +93,13 @@ export default {
       }),
     })
     .then(() => {
+      this.sending = false
       this.formData = ""
       this.$router.push('/')
       this.success = true
+      EventBus.$emit('form-submitted')
+      EventBus.$emit('success')
+      window.scrollTo(0,0)
     })
     .catch(error => alert(error))
   },

@@ -6,7 +6,7 @@
         <div class="hero-details">
           <ClientOnly>
           <vue-typer
-            :text='["Firm Practice", "Workflows", "Tax Returns", "Bookkeeping"]'
+            :text='["Firm Practice", "Workflow", "Tax Returns", "Bookkeeping"]'
             :repeat='Infinity'
             :shuffle='false'
             initial-action='typing'
@@ -20,7 +20,7 @@
           ></vue-typer>
           </ClientOnly>
           <h1 class="hero-title">Management</h1>
-          <button class="hero-btn">Request Demo</button>
+          <button class="hero-btn" type="button" @click="showForm">Request Demo</button>
         </div>
         <HeroImg class="hero-img" />
         <g-image src="../../static/mobile_hero_illustration.png" class="mobile-hero"></g-image>
@@ -28,6 +28,7 @@
     </section>
     <Mission />
     <Features />
+    <Modal v-on:form-submitted="removeModal" v-if="showModal"  @close-modal="removeModal"/>
   </Layout>
 </template>
 
@@ -35,19 +36,40 @@
 import HeroImg from '@/components/HeroImg.vue'
 import Mission from '@/components/Mission.vue'
 import Features from '@/components/Features.vue'
+import Modal from '@/components/Modal.vue'
+import {EventBus} from '~/utils/event.js'
 
 export default {
   metaInfo: {
     title: 'Practice Management'
   },
+  data() {
+    return {
+      showModal: false
+    }
+  },
   components: {
     HeroImg,
     Mission,
     Features,
+    Modal,
     VueTyper: () => 
     import ('vue-typer')
     .then( m => m.VueTyper)
     .catch()
+  },
+  methods: {
+    showForm() {
+      this.showModal = true
+    },
+    removeModal() {
+      this.showModal = false
+    }
+  },
+  mounted() {
+    EventBus.$on('form-submitted', () => {
+      this.showModal = false
+    })
   }
 }
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div class="layout">
     <Navbar id="navbar"/>
+    <Success v-if="successModal" @close-modal="closeSuccessModal" />
     <div class="layout-container">
       <transition name="fade" appear>
         <main>
@@ -25,12 +26,30 @@ query {
 import Navbar from '@/components/Navbar.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
+import Success from '@/components/Success.vue'
+import {EventBus} from '~/utils/event.js'
 export default {
   name: 'Default',
+  data() {
+    return {
+      successModal: false
+    }
+  },
   components: {
     Navbar,
     Contact,
-    Footer
+    Footer,
+    Success
+  },
+  methods: {
+    closeSuccessModal() {
+      this.successModal = false
+    }
+  },
+  mounted() {
+    EventBus.$on('success', () => {
+      this.successModal = true
+    })
   }
 }
 </script>
