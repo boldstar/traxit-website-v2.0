@@ -1,5 +1,5 @@
 <template>
-    <div class="success-modal">
+    <div class="success-modal" @click="closeModal">
         <div class="success-modal-content">
             <div class="success-modal-top">
                 <h2 class="success-modal-header">Thank You!</h2>

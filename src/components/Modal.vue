@@ -1,5 +1,5 @@
 <template>
-    <div class="modal">
+    <div class="modal" @click="closeModal">
         <div class="modal-content">
             <div class="modal-top">
                 <h2 class="modal-header">Free Demo Form</h2>
