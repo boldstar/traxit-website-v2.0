@@ -5,7 +5,7 @@
                 <h2 class="modal-header">Free Demo Form</h2>
                 <button class="cancel-btn" type="button" @click="closeModal">Cancel</button>
             </div>
-            <p class="modal-text">Currently we are offering a <strong>FREE 90 DAY TRIAL</strong> to give firms the opportunity to test, experience and decide if our tool is the right fit. Once the 90 day trial has expired the "Basic Plan" will kick in. If you decide to not continue using TRAXIT there will be no issues. If at some point you change your mind after the account has expired and would like to re-activate it, please call our team at (111) 222-3333</p>
+            <p class="modal-text">Currently we are offering a <strong>FREE 90 DAY TRIAL</strong> to give firms the opportunity to test, experience and decide if our tool is the right fit. Sign up for our free demo today to experience TRAXIT</p>
             <Form />
         </div>
     </div>
@@ -85,6 +85,17 @@ export default {
     @media screen and (max-width: 767px) {
         .modal-text {
             font-size: .8rem;
+        }
+
+        .modal {
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 30px;
+            border-radius: 0;
         }
     }
 </style>
