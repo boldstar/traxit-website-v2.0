@@ -1,5 +1,5 @@
 <template>
-    <div class="modal" @click="closeModal">
+    <div class="modal">
         <div class="modal-content">
             <div class="modal-top">
                 <h2 class="modal-header">Free Demo Form</h2>
@@ -21,7 +21,7 @@ export default {
     methods: {
         closeModal() {
             this.$emit('close-modal')
-        }
+        },
     }
 }
 </script>

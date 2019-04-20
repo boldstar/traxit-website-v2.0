@@ -122,7 +122,7 @@ export default {
     z-index: 2;
     padding: 0;
     position: absolute;
-    left: 10px;
+    left: 0;
     background-color: var(--white);
     padding: 2px 5px;
     border-radius: 3px;
