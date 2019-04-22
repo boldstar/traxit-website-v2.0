@@ -4,11 +4,11 @@
             <h2 class="team-header">The Team</h2>
             <div class="team-members">
                 <div class="member">
-                    <div class="team-img"></div>
+                    <div class="aurelia-team-img"></div>
                     <h4>Aurelia Weems</h4>
                 </div>
                 <div class="member">
-                    <div class="team-img"></div>
+                    <div class="tj-team-img"></div>
                     <h4>TJ Weems</h4>
                 </div>
             </div>
@@ -55,7 +55,16 @@ export default {
     color: var(--darkgray);
 }
 
-.team-img {
+.aurelia-team-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: white;
+    background-image: url('../../static/img/aurelias-avatar.jpg');
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.25);
+}
+
+.tj-team-img {
     height: 200px;
     width: 200px;
     border-radius: 50%;
