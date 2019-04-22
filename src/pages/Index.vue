@@ -6,7 +6,7 @@
         <div class="hero-details">
           <ClientOnly>
           <vue-typer
-            :text='["Firm Practice", "Workflow", "Tax Returns", "Bookkeeping"]'
+            :text='["Firm Practice", "Workflow", "Process", "Task", "Tax Returns", "Bookkeeping"]'
             :repeat='Infinity'
             :shuffle='false'
             initial-action='typing'
