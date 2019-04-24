@@ -3,7 +3,7 @@
         <div class="pricing-content">
             <div class="pricing-details">
                 <h2 class="pricing-details-header">Pricing</h2>
-                <p>Currently we are offering a <strong>FREE 90 DAY TRIAL</strong> to give firms the opportunity to test, experience and decide if our tool is the right fit. Once the 90 day trial has expired the "Basic Plan" will kick in. If you decide to not continue using TRAXIT there will be no issues. If at some point you change your mind after the account has expired and would like to re-activate it, please call our team at (111) 222-3333</p>
+                <p>Currently we are offering a <strong>FREE 90 DAY TRIAL</strong> to give firms the opportunity to test, experience and decide if our tool is the right fit. Once the 30 day trial has expired the "Basic Plan" will kick in. If you decide to not continue using TRAXIT there will be no issues. If at some point you change your mind after the account has expired and would like to re-activate it, please call our team at (936) 213-0639</p>
             </div>
             <div class="pricing-card">
                 <div class="pricing-card-headers">

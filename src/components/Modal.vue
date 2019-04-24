@@ -5,7 +5,7 @@
                 <h2 class="modal-header">Free Demo Form</h2>
                 <button class="cancel-btn" type="button" @click="closeModal">Cancel</button>
             </div>
-            <p class="modal-text">Currently we are offering a <strong>FREE 90 DAY TRIAL</strong> to give firms the opportunity to test, experience and decide if our tool is the right fit. Sign up for our free demo today to experience TRAXIT</p>
+            <p class="modal-text">Currently we are offering a <strong>FREE 30 DAY TRIAL</strong> to give firms the opportunity to test, experience and decide if our tool is the right fit. Sign up for our free demo today to experience TRAXIT</p>
             <Form />
         </div>
     </div>
