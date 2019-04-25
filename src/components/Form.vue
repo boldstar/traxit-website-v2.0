@@ -63,7 +63,6 @@ export default {
       .join('&')
   },
   handleSubmit(e) {
-    this.sending = true
     if(this.formData.business_name == '' || this.formData.business_name == null) {
       this.error = true 
       return;
@@ -84,6 +83,7 @@ export default {
       this.error = true
       return;
     }
+    this.sending = true
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
