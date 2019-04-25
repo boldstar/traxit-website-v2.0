@@ -16,23 +16,23 @@
   </p>
     <div class="input-group">
       <label for="business_name" class="label" >Business Name</label>
-      <input type="text" name="business_name" v-model="formData.business_name" :class="{'input-error': error}" @change="error = false"/>
+      <input type="text" name="business_name" v-model="formData.business_name" :class="{'input-error': error && formData.business_name == null}" @change="error = false"/>
     </div>
     <div class="input-group">
       <label for="first_name" class="label" >First Name</label>
-      <input type="text" name="first_name" v-model="formData.first_name" :class="{'input-error': error}" @change="error = false"/>
+      <input type="text" name="first_name" v-model="formData.first_name" :class="{'input-error': error && formData.first_name == null}" @change="error = false"/>
     </div>
     <div class="input-group">
       <label for="last_name" class="label" >Last Name</label>
-      <input type="text" name="last_name" v-model="formData.last_name" :class="{'input-error': error}" @change="error = false"/>
+      <input type="text" name="last_name" v-model="formData.last_name" :class="{'input-error': error && formData.last_name == null}" @change="error = false"/>
     </div>
     <div class="input-group">
       <label for="email">Email</label>
-      <input type="email" name="email" v-model="formData.email" :class="{'input-error': error}" @change="error = false"/>
+      <input type="email" name="email" v-model="formData.email" :class="{'input-error': error && formData.email == null}" @change="error = false"/>
     </div>
     <div class="input-group">
       <label for="phone">Phone Number</label>
-      <input type="text" name="phone" v-model="formData.phone" :class="{'input-error': error}" @change="error = false"/>
+      <input type="text" name="phone" v-model="formData.phone" :class="{'input-error': error && formData.phone == null}" @change="error = false"/>
     </div>
   <button type="submit" class="form-btn" :disabled="sending">
     <span v-if="!sending">Submit</span>
