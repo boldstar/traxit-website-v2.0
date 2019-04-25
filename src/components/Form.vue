@@ -32,7 +32,7 @@
     </div>
     <div class="input-group">
       <label for="phone">Phone Number</label>
-      <input type="text" name="phone" v-model="formData.phone" :class="{'input-error': error && formData.phone == null}" @change="error = false"/>
+      <NumberInput type="text" name="phone" v-model="formData.phone" :class="{'input-error': error && formData.phone == null}" @change="error = false" mask-type="number"/>
     </div>
   <button type="submit" class="form-btn" :disabled="sending">
     <span v-if="!sending">Submit</span>
@@ -45,9 +45,14 @@
 
 <script>
 import {EventBus} from '~/utils/event.js'
+import NumberInput from '@/components/NumberInput.vue'
+
 export default {
   name: 'Form',
   props: ['slogan'],
+  components: {
+    NumberInput
+  },
   data() {
     return {
       formData: {
