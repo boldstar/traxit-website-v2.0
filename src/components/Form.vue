@@ -162,7 +162,7 @@ export default {
   }
 
   .input-error {
-    border: 1px solid red;
+    border: 1px solid red!important;
   }
 
   .input-group {
