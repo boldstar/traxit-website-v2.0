@@ -20,6 +20,7 @@ export default {
         padding: 10px;
         width: 100%;
         position: relative;
+        padding: 0;
     }
 
     .footer-contents {
@@ -28,17 +29,17 @@ export default {
         display: flex;
         justify-content: space-between;
         height: 100%;
+        padding: 0 35px;
     }
 
     .copy {
         align-self: center;
         font-size: 1.2rem;
-        margin-left: 35px;
     }
 
     @media screen and (max-width: 1140px) {
         .footer-contents {
-            padding: 0 35px;
+           
         }
     }
 
