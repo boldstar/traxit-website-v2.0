@@ -2,7 +2,7 @@
   <form 
     name="free_demo_form"
     method="post"
-    v-on:submit.prevent="handleSubmit"
+    v-on:submit.prevent="validateBeforeSubmit"
     action="/success/"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
@@ -50,39 +50,34 @@ export default {
   props: ['slogan'],
   data() {
     return {
-      formData: {},
+      formData: {
+        business_name: null,
+        first_name: null,
+        last_name: null,
+        email: null,
+        phone: null
+      },
       success: false,
       error: false,
       sending: false
     }
   },
  methods: {
+  validateBeforeSubmit(e) {
+    for( var key in this.formData) {
+      if(this.formData[key] == null || this.formData[key] == '') {
+        this.error = true
+        return
+      }
+    }
+    this.handleSubmit(e)
+  },
   encode(data) {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
   },
   handleSubmit(e) {
-    if(this.formData.business_name == '' || this.formData.business_name == null) {
-      this.error = true 
-      return;
-    }
-    if(this.formData.first_name == '' || this.formData.first_name == null) {
-      this.error = true
-      return;
-    }
-    if(this.formData.last_name == '' || this.formData.last_name == null) {
-      this.error = true
-      return;
-    }
-    if(this.formData.email == '' || this.formData.email == null) {
-      this.error = true
-      return;
-    }
-    if(this.formData.phone == '' || this.formData.phone == null) {
-      this.error = true
-      return;
-    }
     this.sending = true
     fetch('/', {
       method: 'POST',
