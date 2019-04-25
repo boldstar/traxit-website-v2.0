@@ -1,11 +1,8 @@
 <template>
-    <div class="sidebar" :class="{'sidebar-collapsed': toggle}">
+    <div class="sidebar">
       <div class="feature-list">
-        <button class="sidebar-btn" type="button" @click="toggleSidebar">
-          <i class="fas fa-bars"></i>
-        </button>
-        <ul class="feature-list-links"  :class="{'show-links': toggle}">
-          <li class="feature-link-li" v-for="feature in features" :key="feature.id" @click="toggle = false">
+        <ul class="feature-list-links">
+          <li class="feature-link-li" v-for="feature in features" :key="feature.id">
             <g-link class="features-link" :to="feature.node.path" :class="{'active-link' : feature.node.path == $route.path}">{{ feature.node.title }}</g-link>
           </li>
         </ul>
@@ -40,11 +37,6 @@ export default {
             return this.$static.features.edges.slice().reverse()
         }
     },
-    methods: {
-      toggleSidebar() {
-        this.toggle = !this.toggle
-      }
-    }
 }
 </script>
 
@@ -58,10 +50,6 @@ export default {
     background-color: var(--lightgray);
     padding: 10px;
     align-self: flex-start;
-  }
-
-  .sidebar-btn {
-    display: none;
   }
 
   .feature-list-links {
@@ -100,56 +88,8 @@ export default {
   }
 
 @media screen and (max-width: 767px) {
-  .features-link {
-    font-size: .8rem;
-    padding-top: 0;
-  }
-
   .sidebar {
-    width: 20px;
-    transition: width .2s;
-  }
-
-  .feature-list-links {
     display: none;
-  }
-
-  .sidebar-btn {
-    display: block!important;
-    background: none;
-    border: none;
-    cursor: pointer!important;
-    z-index: 2;
-    padding: 0;
-    position: absolute;
-    left: 0;
-    background-color: var(--white);
-    padding: 2px 5px;
-    border-radius: 3px;
-    border: .5px solid var(--main);
-    top: 20px;
-  }
-
-  .btn-icon {
-    display: block!important;
-    font-size: 1.4rem!important;    
-    align-self: center;
-    margin-top: 0!important;
-    cursor: pointer!important;
-    color: var(--main);
-  }
-
-  .sidebar-collapsed {
-    width: 100px!important;
-    position: relative;
-    transition: width .2s;
-  }
-
-  .show-links {
-    display: flex;
-    flex-direction: column;
-    width: 100px!important;
-    margin-top: 5px;
   }
 }
 </style>

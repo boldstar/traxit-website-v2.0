@@ -3,6 +3,7 @@
     <div class="feature-layout-background"></div>
     <Navbar id="navbar"/>
     <div class="feature-layout-container">
+      <FeatureMenu class="menu" />
       <Sidebar />
       <transition name="fade" appear>
         <main class="features-main">
@@ -10,6 +11,7 @@
         </main>
       </transition>
     </div>
+    <Who />
     <Contact />
     <Footer />
   </div>
@@ -27,14 +29,18 @@ query {
 import Navbar from '@/components/Navbar.vue'
 import Contact from '@/components/Contact.vue'
 import Sidebar from '@/components/Sidebar.vue'
+import FeatureMenu from '@/components/FeatureMenu.vue'
 import Footer from '@/components/Footer.vue'
+import Who from '@/components/Who.vue'
 export default {
   name: 'Default',
   components: {
     Navbar,
     Contact,
     Sidebar,
-    Footer
+    Footer,
+    Who,
+    FeatureMenu
   }
 }
 </script>
@@ -94,6 +100,7 @@ body {
   display: flex;
   max-width: 1120px;
   margin: 0 auto;
+  margin-bottom: 50px!important;
 }
 
 .fade-enter-active {
@@ -104,9 +111,24 @@ body {
   opacity: 0;
 }
 
+.menu {
+  display: none
+}
+
 @media screen and (max-width: 1140px) {
   .feature-layout-container {
-    padding-right: 35px;
+    padding: 0 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: block;
+  }
+
+  .feature-layout-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

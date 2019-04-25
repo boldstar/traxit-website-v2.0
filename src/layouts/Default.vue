@@ -9,6 +9,7 @@
         </main>
       </transition>
     </div>
+    <Who />
     <Contact />
     <Footer />
   </div>
@@ -25,6 +26,7 @@ query {
 <script>
 import Navbar from '@/components/Navbar.vue'
 import Contact from '@/components/Contact.vue'
+import Who from '@/components/Who.vue'
 import Footer from '@/components/Footer.vue'
 import Success from '@/components/Success.vue'
 import {EventBus} from '~/utils/event.js'
@@ -39,7 +41,8 @@ export default {
     Navbar,
     Contact,
     Footer,
-    Success
+    Success,
+    Who
   },
   methods: {
     closeSuccessModal() {
