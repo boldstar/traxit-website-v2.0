@@ -14,9 +14,9 @@
                 <label for="Email">Email <small class="text-error" v-if="errors.length >= 1 && errors.includes('user_email') || errors.length >= 1 && user.user_email == ''" >Invalid format</small> </label>
                 <input type="email" class="register-input" :class="{'input-error': errors.length >= 1 && errors.includes('user_email') || errors.length >= 1 && user.user_email == ''}" v-model="user.user_email"  placeholder="Email" @input="handleInput" @change="handleChange">
 
-                <label for="Business Name">Password</label>
-                <input type="text" class="register-input" :class="{'input-error': errors.length >= 1 && errors.includes('password') || errors.length >= 1 && user.password == ''}" v-model="user.password"  placeholder="Password" @input="handleInput" @change="handleChange">
-                
+                <label for="Business Name">Password: <small> Min Length: 10 | Ex format: Trax1t234$</small> <small class="text-error" v-if="errors.length >= 1 && user.password == '' || errors.length >= 1 && errors.includes('password_format')" > Invalid format</small></label>
+                <input type="text" class="register-input" :class="{'input-error': errors.length >= 1 && errors.includes('password') || errors.length >= 1 && user.password == '' || errors.length >= 1 && errors.includes('password_format')}" v-model="user.password"  placeholder="Password" @input="handleInput" @change="handleChange">
+
                 <label for="Confirm Password">Confirm Password <small class="text-error" v-if="errors.length >= 1 && errors.includes('password') || errors.length >= 1 && user.password == ''" >Password does not match</small> </label>
                 <input type="text" class="register-input" :class="{'input-error': errors.length >= 1 && errors.includes('confirm_password') || errors.length >= 1 && user.confirm_password == ''}" v-model="user.confirm_password"  placeholder="Confirm Password" @input="handleInput" @change="handleChange">
             </form>

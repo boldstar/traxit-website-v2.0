@@ -3,3 +3,9 @@ export function validateEmail(value) {
     if(email.test(String(value).toLowerCase())) return true;
     if(!email.test(String(value).toLowerCase())) return false;
 }
+
+export function passwordUnique(value) {
+    var password = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{10,}$/
+    if(password.test(String(value).toLowerCase())) return true;
+    if(!password.test(String(value).toLowerCase())) return false;
+}

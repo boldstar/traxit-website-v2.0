@@ -19,14 +19,14 @@ export default {
     methods: {
      startProgress() {
         var vm = this
-        var width = 20
+        var width = 5
         var increase = setInterval(() => {
           vm.progress += width
           if(vm.progress >= 100) {
             clearInterval(increase);
             this.done = true
           }
-      }, 800)
+      }, 1000)
       }
     },
     mounted() {

@@ -9,11 +9,11 @@
             </div>
             <form class="register-form">
                 <label for="Business Name">Business Name</label>
-                <input type="text" class="register-input" :class="{'input-error': errors.length >= 1 && business.business_name == ''}" placeholder="Business Name" v-model="business.business_name" @input="handleInput" @change="handleChange">
+                <input type="text" class="register-input" :class="{'input-error': errors.length >= 1 && business.business_name == ''}" placeholder="Business Name" v-model="business.business_name" @input="handleInput($event)" @change="handleChange">
                 <label for="Business Name">Business Email <small class="text-error" v-if="errors.length >= 1 && errors.includes('business_email') || errors.length >= 1 && business.business_email == ''" >Invalid format</small></label>
-                <input type="email" class="register-input" :class="{'input-error': errors.length >= 1 && errors.includes('business_email') || errors.length >= 1 && business.business_email == ''}" placeholder="Business Email" v-model="business.business_email" @input="handleInput" @change="handleChange">
+                <input type="email" class="register-input" :class="{'input-error': errors.length >= 1 && errors.includes('business_email') || errors.length >= 1 && business.business_email == ''}" placeholder="Business Email" v-model="business.business_email" @input="handleInput($event)" @change="handleChange">
                 <label for="Business Name">Business Phone Number</label>
-                <input type="text" class="register-input" :class="{'input-error': errors.length >= 1 && business.business_number == ''}" placeholder="Business Phone Number" v-model="business.business_number" @input="handleInput" @change="handleChange">
+                <input type="text" maxlength="10" id="business_number" class="register-input" :class="{'input-error': errors.length >= 1 && business.business_number == ''}" placeholder="Business Phone Number" v-model="business.business_number" @input="handleInput" @change="handleChange($event)">
             </form>
         </div>
         <div class="register-footer">
@@ -25,6 +25,7 @@
 
 <script>
 import {EventBus} from '~/utils/event.js'
+import {formatNumber} from '~/utils/filter.js'
 export default {
     name: 'StepOne',
     props: ['data', 'errors'],
@@ -37,8 +38,13 @@ export default {
         handleChange () {
            this.$emit('change')
         },
-        handleInput () {
-            return this.$emit('input', this.business)
+        handleInput (event) {
+            var number = formatNumber(this.business.business_number)
+            var final = number
+            if(event.target.id == 'business_number') {
+                this.$set(this.business, 'business_number' , final);
+            }
+            return this.$emit('input', final)
         },
          setCurrentValue (business) {
             this.business = business
