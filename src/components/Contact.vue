@@ -4,8 +4,8 @@
             <h2 class="contact-header">Contact</h2>
             <div class="contact-body">
                 <div class="contact-details">
-                    <h2 class="contact-details-header">Request Your Free Demo Today!</h2>
-                    <p>To start using TRAXIT simply fill out the form to the right and we will be in contact as soon as possible. To ensure you understand our product we would like to give you a full demonstration and a 30 day free trial. This should give you the time to determine if we are the right fit for you and your team!</p>
+                    <h2 class="contact-details-header">Would you like to learn more?</h2>
+                    <p>Feel free to fill out the form on the right and we will be in touch soon! If you feel like you are ready to start your free trial now <button class="register-btn" @click="showForm">Click Here</button></p>
                      <g-image src="../../static/img/Arrow.png" width="250" class="arrow"></g-image>
                 </div>
                 <Form />
@@ -16,10 +16,16 @@
 
 <script>
 import Form from '@/components/Form.vue'
+import {EventBus} from '~/utils/event.js'
 export default {
     name: 'Contact',
     components: {
         Form
+    },
+    methods: {
+        showForm() {
+            EventBus.$emit('start-registration')
+        }
     }
 }
 </script>

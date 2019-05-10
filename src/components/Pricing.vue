@@ -3,7 +3,7 @@
         <div class="pricing-content">
             <div class="pricing-details">
                 <h2 class="pricing-details-header">Pricing</h2>
-                <p>Currently we are offering a <strong>FREE 90 DAY TRIAL</strong> to give firms the opportunity to test, experience and decide if our tool is the right fit. Once the 30 day trial has expired the "Basic Plan" will kick in. If you decide to not continue using TRAXIT there will be no issues. If at some point you change your mind after the account has expired and would like to re-activate it, please call our team at (936) 213-0639</p>
+                <p>Currently we are offering a <strong>FREE 30 DAY TRIAL</strong> with no credit card up front to give firms the opportunity to test, experience and decide if our tool is the right fit. At the end of <strong>30 DAYS</strong> you will be sent an invoice requesting to provide credit card information. If at some point you change your mind after the account has expired and would like to re-activate it, please call our team at (936) 213-0639.</p>
             </div>
             <div class="pricing-card">
                 <div class="pricing-card-headers">
@@ -36,7 +36,7 @@
                         <Checkmark class="checkmark" />
                     </li>
                 </ul>
-                <button type="button" class="pricing-btn">Request Free Demo Now</button>
+                <button type="button" class="pricing-btn" @click="showForm">Start Free Trial Now</button>
             </div>
             <Subscription class="subscription" />
         </div>
@@ -46,11 +46,17 @@
 <script>
 import Checkmark from '~/assets/svg/checkmark.svg'
 import Subscription from '~/assets/svg/subscription.svg'
+import {EventBus} from '~/utils/event.js'
 export default {
     name: 'Pricing',
     components: {
         Checkmark,
         Subscription
+    },
+    methods: {
+        showForm() {
+            EventBus.$emit('start-registration')
+        }
     }
 }
 </script>

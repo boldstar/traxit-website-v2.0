@@ -6,6 +6,7 @@
     action="/success/"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    class="form"
   >
   <p class="slogan">{{slogan}}</p>
   <input type="hidden" name="form-name" value="contact" />
@@ -117,7 +118,7 @@ export default {
     left: 0;
   }
 
-  form {
+  .form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,7 +171,7 @@ export default {
   }
 
   @media screen and (max-width: 950px) {
-      form {
+      .form {
           max-width: 400px;
       }
   }
@@ -182,7 +183,7 @@ export default {
   }
 
   @media screen and (max-width: 458px) {
-    form {
+    .form {
       width: 90%;
     }
   }

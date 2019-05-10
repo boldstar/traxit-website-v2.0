@@ -20,7 +20,7 @@
           ></vue-typer>
           </ClientOnly>
           <h1 class="hero-title">Management</h1>
-          <button class="hero-btn" type="button" @click="showForm">Request Demo</button>
+          <button class="hero-btn" type="button" @click="showForm">Start Free Trial</button>
         </div>
         <HeroImg class="hero-img" />
         <g-image src="../../static/mobile_hero_illustration.png" class="mobile-hero"></g-image>
@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     showForm() {
-      this.showModal = true
+      EventBus.$emit('start-registration')
     },
     removeModal() {
       this.showModal = false
