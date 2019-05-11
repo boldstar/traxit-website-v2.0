@@ -91,8 +91,8 @@ export default {
 
     .toggle-height {
         height: 100%!important;
-        min-height: calc(100vh - 133px)!important;
-        max-height: calc(100vh - 133px)!important;
+        min-height: calc(100vh - 150px)!important;
+        max-height: calc(100vh - 150px)!important;
     }
 
     .feature-menu-link-li {

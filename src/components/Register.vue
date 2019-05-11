@@ -107,10 +107,8 @@ export default {
                 password: this.user.password,
                 password_confirmation: this.user.confirm_password
             }).then(response => {
-                console.log(response.data)
                 this.complete()
             }).catch(error => {
-                console.log(error.response.data)
                 this.errorHappened(error.response.data)
             })
         },
