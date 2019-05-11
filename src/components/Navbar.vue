@@ -7,11 +7,11 @@
                 <button class="toggle-nav-btn" type="button" @click="toggleNavbar"><i class="fas fa-bars"></i></button>
 
                 <nav class="nav collapsed-nav" :class="{'toggled': toggle}">
-                    <g-link class="nav_link" to="/">Home</g-link>
                     <g-link class="nav_link" to="/about">Our Mission</g-link>
                     <g-link class="nav_link" to="/feature/dashboard-feature">How It Works</g-link>
                     <g-link class="nav_link" to="/pricing">Pricing</g-link>
-                    <a class="nav_link login-btn" href="https://app.traxit.io/login">Login</a>
+                    <a class="nav_link" href="https://app.traxit.io/login">Login</a>
+                    <button type="button" class="free-btn" @click="showFreeTrialForm">Start Free Trial</button>
                 </nav>
             </div>
         </div>
@@ -20,6 +20,7 @@
 
 <script>
 import Logo from '@/components/Logo.vue'
+import {EventBus} from '~/utils/event.js'
 export default {
     name: 'Navbar',
     data() {
@@ -42,6 +43,9 @@ export default {
             header.classList.remove('navbar-sticky');
         }
       },
+      showFreeTrialForm() {
+          EventBus.$emit('start-registration')
+      }
     },
     mounted() {
         window.addEventListener('scroll', this.handleSCroll);
@@ -110,20 +114,25 @@ nav {
     display: none;
 }
 
-.login-btn {
-  background: var(--white);
-  border: .5px solid var(--darkgray);
-  border-radius: 2px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,.25);
-  color: var(--main);
-  padding: 2px 10px;
-  margin-left: 35px;
-  transition: background 1s;
-  font-size: 1rem;
+.free-btn {
+    background: var(--white);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 var(--darkgray);
+    color: var(--main);
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 35px;
+    transition: background 1s;
 }
 
-.login-btn:hover {
-  cursor: pointer;
+.free-btn:hover {
+    margin-top: 2px;
+    cursor: pointer;
+    background: var(--lightgray);
+    box-shadow: 0 0 10px 0 var(--main);
+    color: var(--darkgray);
 }
 
 @media screen and (max-width: 1160px) {
@@ -132,7 +141,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 850px) {
     .navbar {
         padding-right: 0!important;
         padding-left: 20px!important;

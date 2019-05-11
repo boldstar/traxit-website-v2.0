@@ -16,7 +16,7 @@ export default {
 <style>
 .why {
     width: 100%;
-    background: var(--lightgray);
+    background: var(--white);
 }
 
 .why-content {
@@ -33,6 +33,13 @@ export default {
     font-size: 3rem;
     margin: 10px auto;
     color: var(--main);
+    margin-bottom: 0!important;
+}
+
+.why-statement {
+    padding: 0 50px;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 767px) {

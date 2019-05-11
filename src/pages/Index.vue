@@ -142,7 +142,10 @@ export default {
 }
 
 .hero-btn:hover {
-  cursor: pointer;
+    margin-top: 37px;
+    cursor: pointer;
+    background: var(--lightgray);
+    box-shadow: 0 0 10px 0 var(--main);
 }
 
 .hero-img {
