@@ -116,7 +116,7 @@ export default {
         },
         complete() {
             this.processRequest = false
-            // window.location.replace('https://app.traxit.io')
+            window.location.replace('https://app.traxit.io')
         },
         errorHappened() {
             this.processRequest = false
