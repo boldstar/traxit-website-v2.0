@@ -6,7 +6,7 @@
         <div class="hero-details">
           <ClientOnly>
           <vue-typer
-            :text='["Firm Practice", "Workflow", "Process", "Task", "Tax Returns", "Bookkeeping"]'
+            :text='["Practice", "Accounting", "Tax Returns", "Bookkeeping"]'
             :repeat='Infinity'
             :shuffle='false'
             initial-action='typing'
@@ -19,6 +19,7 @@
             caret-animation='blink'
           ></vue-typer>
           </ClientOnly>
+          <h1 class="hero-title">Workflow</h1>
           <h1 class="hero-title">Management</h1>
           <button class="hero-btn" type="button" @click="showForm">Start Free Trial</button>
         </div>
@@ -41,11 +42,14 @@ import {EventBus} from '~/utils/event.js'
 
 export default {
   metaInfo: {
-    title: 'Practice Management'
+    title: 'Workflow Management Software for CPAs, EAs, Bookkeepers and more',
+    meta: [
+        {key: 'description', title: 'Workflow Management Software', content: 'Workflow management software for CPAs, EAs, Bookkeepers, Tax Preparers and more. Learn what TRAXIT can do for you by starting a 30 day free trial with no credit card required today!'}
+    ]
   },
   data() {
     return {
-      showModal: false
+      showModal: false,
     }
   },
   components: {
