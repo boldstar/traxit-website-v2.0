@@ -1,6 +1,7 @@
 <template>
   <div class="feature-layout">
     <div class="feature-layout-background"></div>
+    <Register v-if="registration" />
     <Navbar id="navbar"/>
     <div class="feature-layout-container">
       <FeatureMenu class="menu" />
@@ -32,6 +33,8 @@ import Sidebar from '@/components/Sidebar.vue'
 import FeatureMenu from '@/components/FeatureMenu.vue'
 import Footer from '@/components/Footer.vue'
 import Who from '@/components/Who.vue'
+import Register from '@/components/Register.vue'
+import {EventBus} from '~/utils/event.js'
 export default {
   name: 'Default',
   components: {
@@ -40,7 +43,21 @@ export default {
     Sidebar,
     Footer,
     Who,
-    FeatureMenu
+    FeatureMenu,
+    Register
+  },
+  data() {
+    return {
+      registration: false
+    }
+  },
+  mounted() {
+      EventBus.$on('close-registration', () => {
+        this.registration = false
+      })
+      EventBus.$on('start-registration', () => {
+        this.registration = true
+      })
   }
 }
 </script>
