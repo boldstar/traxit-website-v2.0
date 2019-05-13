@@ -5,7 +5,7 @@ excerpt: This is the excerpt for the dashboard feature
 
 Giving a visual representation of the data you have flowing through your firm or business is great for quick decision making and a high level overview of what is happening. The below image should give you an idea of what TRAXIT is tracking.
 
-![alt text](../static/img/dashboard-feature.png)
+![Workflow dashboard system](../static/img/dashboard-feature.png)
 
 ### The Breakdown
 

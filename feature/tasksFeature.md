@@ -5,7 +5,7 @@ excerpt: This is the excerpt for the dashboard feature
 
 This is great to keep everyone informed on what is needed to be done. And more specifically what each team member has assigned. Each team member will have there own tasks. Each task is related to the processing of an engagement.
 
-![alt text](../static/img/task-feature.png)
+![Workflow task management system](../static/img/task-feature.png)
 
 ### The Breakdown
 

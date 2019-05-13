@@ -5,7 +5,7 @@ excerpt: This is the excerpt for the dashboard feature
 
 Engagements are what is being processed. For instance if you do a 1040 tax return, that would be considered an engagement. Consider it to be the connection between you and your clients. Each engagement will also contains specific details and questions that can be viewed at anytime.
 
-![alt text](../static/img/engagement-feature.png)
+![Workflow engagement type system](../static/img/engagement-feature.png)
 
 ### The Breakdown
 

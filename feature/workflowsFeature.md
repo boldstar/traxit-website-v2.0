@@ -5,7 +5,7 @@ excerpt: This is the excerpt for the dashboard feature
 
 The backbone of this tool is workflows. They are meant to process and track the status of engagements. Essentially they can be used for anything that requires steps to complete but for a CPA firm this might be tax returns, or bookkeeping.
 
-![alt text](../static/img/workflow-feature.png)
+![Workflow process system](../static/img/workflow-feature.png)
 
 ### The Breakdown
 
