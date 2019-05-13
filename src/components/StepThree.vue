@@ -14,7 +14,7 @@
         </div>
         <div class="register-footer">
             <button type="button" class="register-btn cancel" @click="goBack">Go Back</button>
-            <button type="button" class="register-btn" @click="completeRegistration">Complete Registration</button>
+            <button type="button" class="register-btn" @click="completeRegistration">Start Free Trial</button>
         </div>
     </div>
 </template>
