@@ -97,7 +97,7 @@ export default {
             this.stepThreeDone = true
             this.processRequest = true
             const fqdn = this.business.business_name.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g,'' ).replace(/^\s/,'').replace(/\s$/,'').toLowerCase()
-            axios.post('http://traxit.test/api/free-trial-register', {
+            axios.post('https://traxit.pro/api/free-trial-register', {
                 company: this.business.business_name,
                 company_email: this.business.business_email,
                 company_number: this.business.business,
