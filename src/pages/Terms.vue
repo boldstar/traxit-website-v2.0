@@ -66,7 +66,7 @@
 
         We respect the intellectual property rights of others and encourage you to do the same. Accordingly, we have a policy of removing Content or other user submissions that violate intellectual property rights of others, suspending access to the Service (or any portion thereof) to any user who uses the Service in violation of someone’s intellectual property rights, and/or terminating in appropriate circumstances the account of any user who uses the Service in violation of someone’s intellectual property rights.
         Pursuant to Title 17 of the United States Code, Section 512, we have implemented procedures for receiving written notification of claimed copyright infringement and for processing such claims in accordance with such law. If you believe your copyright or other intellectual property right is being infringed by a user of the Service, please provide written notice to our agent for notice of claims of infringement:
-        Attn: TRAXIT DMCA Agent, Thomas Weems,; Email: thomas@traxit.io
+        Attn: TRAXIT DMCA Agent, Thomas Weems; Email: thomas@traxit.io
         <br>
         <br>
         To be sure the matter is handled immediately, your written notice must:
