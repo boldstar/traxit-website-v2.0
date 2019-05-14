@@ -258,9 +258,14 @@ input.register-input {
 
      .register-content {
             max-width: 400px;
-            height: 600px;
+            height: 550px;
             width: 90%;
             overflow: hidden;
+            margin-top: 50px;
+    }
+
+    .register-header {
+        display: none;
     }
   }
 </style>
