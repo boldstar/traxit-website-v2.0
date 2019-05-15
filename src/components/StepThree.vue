@@ -52,7 +52,7 @@ export default {
             this.$emit('complete')
         },
         openTerms() {
-            window.open('localhost:8080/terms', '_blank')
+            window.open('https://traxit.io/terms', '_blank')
         }
     },
     watch: {
