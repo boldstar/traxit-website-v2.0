@@ -63,7 +63,7 @@ export default {
     EventBus.$on('start-registration', () => {
       this.registration = true
     })
-  }
+  },
 }
 </script>
 
