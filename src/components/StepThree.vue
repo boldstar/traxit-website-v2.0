@@ -11,6 +11,8 @@
                 <li>Email: {{user.user_email}}</li>
                 <li>Password: {{user.password}}</li>
             </ul>
+            <small>By creating a free trial you agree to our</small>
+            <a class="terms-link" @click="openTerms">terms of service</a>
         </div>
         <div class="register-footer">
             <button type="button" class="register-btn cancel" @click="goBack">Go Back</button>
@@ -48,6 +50,9 @@ export default {
         },
         completeRegistration() {
             this.$emit('complete')
+        },
+        openTerms() {
+            window.open('localhost:8080/terms', '_blank')
         }
     },
     watch: {
@@ -92,5 +97,12 @@ export default {
             max-width: 350px;
             height: 200px;
             margin: 10px auto;
+    }
+
+    .terms-link {
+        font-size: .8rem;
+        text-decoration: none;
+        color: #0077ff;
+        cursor: pointer;
     }
 </style>

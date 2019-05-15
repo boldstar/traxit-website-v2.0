@@ -13,4 +13,5 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
   })
+
 }

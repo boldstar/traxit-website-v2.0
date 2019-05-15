@@ -1,8 +1,24 @@
 <template>
     <footer>
         <div class="footer-contents">
-            <span class="copy">&copy; 2019 TRAXIT | All Rights Reserved</span>
-            <span class="copy">(936) 213-0639</span>
+            <div class="footer-contents-left">
+                <span class="copy">&copy; 2019 TRAXIT | All Rights Reserved</span>
+                <div class="policies">
+                    <g-link class="policy-link" to="/privacy">Privacy Policy</g-link>
+                    <span>|</span>
+                    <g-link class="policy-link" to="/terms">Terms of Service</g-link>
+                    <span>|</span>
+                    <g-link class="policy-link" to="/refunds">Refund Policy</g-link>
+                </div>
+            </div>
+            <div class="footer-contents-right">
+                <span>info@traxit.io</span>
+                <span>(936) 213-0639</span>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/traxit" class="social-link"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/company/35691465" class="social-link"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 </template>
@@ -15,7 +31,6 @@ export default {
 
 <style>
     footer {
-        height: 70px;
         background: var(--lightgray);
         padding: 10px;
         width: 100%;
@@ -29,18 +44,46 @@ export default {
         display: flex;
         justify-content: space-between;
         height: 100%;
-        padding: 0 35px;
+        padding: 10px 35px;
     }
 
     .copy {
-        align-self: center;
         font-size: 1.2rem;
+        margin-bottom: 5px;
     }
 
-    @media screen and (max-width: 1140px) {
-        .footer-contents {
-           
-        }
+    .policies {
+        display: flex;
+    }
+
+    .policy-link {
+        margin: 0 10px;
+        text-decoration: none;
+        color:  var(--main);
+    }
+
+    .footer-contents-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-contents-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        width: 150px;
+    }
+
+    .social-links {
+        display: flex;
+    }
+
+    .social-link {
+        color: var(--darkgray);
+        margin-right: 10px;
+        cursor: pointer;
     }
 
     @media screen and (max-width: 767px) {
@@ -48,10 +91,22 @@ export default {
            font-size: .8rem;
        }
 
+       .policies {
+           font-size: .8rem;
+       }
+
        .footer-contents {
            flex-direction: column;
            justify-content: center;
-           align-items: flex-start;
+           align-items: center;
+       }
+
+       .footer-contents-left {
+           align-items: center;
+       }
+
+       .footer-contents-right {
+           align-items: center;
        }
     }
 </style>
