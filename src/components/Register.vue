@@ -116,7 +116,8 @@ export default {
             this.processRequest = false
             window.location.replace('https://app.traxit.io')
         },
-        errorHappened() {
+        errorHappened(error) {
+            console.log(error)
             this.processRequest = false
             this.error = true
         },
