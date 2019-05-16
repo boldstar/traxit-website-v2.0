@@ -1,12 +1,17 @@
 <template>
-    <div class="processing">
-        <div class="processing-bar" v-bind:style="{ width: progress + '%'}">
-          <span class="progress">{{ progress + '%' }}</span>
+    <div class="register-content">
+        <h4 class="processing-header">Building Your Account</h4>
+        <div class="processing">
+            <div class="processing-bar" v-bind:style="{ width: progress + '%'}">
+            <span class="progress" v-if="!done">{{ progress + '%' }}</span>
+            <span class="progress" v-if="done">Almost Done</span>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+
 export default {
     name: 'Processing',
     data() {
@@ -40,13 +45,22 @@ export default {
 
 <style scoped>
 .processing {
-    margin: 0 auto;
+    align-self: center;
+    margin: auto;
     height: 30px;
-    width: 600px;
+    width: 80%;
     background: white;
     box-shadow: 0 0 5px 0 rgba(0,0,0,.25);
     border-radius: 5px;
     transition: all 1s;
+}
+
+.processing-header {
+    margin: 0 auto;
+    position: absolute;
+    left: 25%;
+    top: 175px;
+    font-size: 2rem;
 }
 
 .processing-bar {
@@ -60,14 +74,19 @@ export default {
 
 .progress {
     position: relative;
-    left: 48%;
+    left: 45%;
     top: 5px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
     .processing {
         max-width: 300px;
         width: 90%;
+    }
+
+    .processing-header {
+        font-size: 1rem;
     }
 }
 </style>

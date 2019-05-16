@@ -10,7 +10,7 @@
 
 <script>
 const axios = require('axios')
-import {validateEmail, passwordUnique } from '~/utils/validate.js'
+import { validateEmail, passwordUnique } from '~/utils/validate.js'
 import StepOne from '@/components/StepOne.vue'
 import StepTwo from '@/components/StepTwo.vue'
 import StepThree from '@/components/StepThree.vue'
@@ -157,6 +157,7 @@ export default {
 }
 
 .register-content {
+    position: relative;
     margin: 0 auto;
     width: 600px;
     background: white;
