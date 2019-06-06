@@ -185,7 +185,7 @@ export default {
 
 input.register-input {
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
 }
 
 .register-details {
@@ -245,8 +245,7 @@ input.register-input {
         }
 
         input.register-input {
-            width: 95%;
-            max-width: 350px;
+            width: 100%;
         }
 
   }

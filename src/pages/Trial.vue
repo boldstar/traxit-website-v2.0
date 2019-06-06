@@ -10,10 +10,9 @@ export default {
     name: 'Trial',
     components: {
         Register
-    }
+    },
+    metaInfo: {
+        title: 'Free Trial',
+    },
 }
 </script>
-
-<style>
-
-</style>
