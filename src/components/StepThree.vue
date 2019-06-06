@@ -1,7 +1,7 @@
 <template>
     <div class="register-content">
         <div class="register-header">
-            <span class="register-title">Free Trial | Step 3</span>
+            <span class="register-title">Free Trial</span>
         </div>
         <Workflow class="svg-register" />
         <div class="verify-body">

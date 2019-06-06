@@ -1,5 +1,6 @@
 <template>
     <div class="register">
+        <Progress :stepOne="stepOneDone" :stepTwo="stepTwoDone" :stepThree="stepThreeDone" />
         <StepOne :data="business" :errors="errorArray" @step-one-complete="validateStepOne" @change="clearErrors" v-if="!stepOneDone && !stepThreeDone" />
         <StepTwo :data="user" :errors="errorArray"  @next-step="validateStepTwo" @change="clearErrors" @go-back="stepOneDone = false" v-if="stepOneDone && !stepTwoDone"/>
         <StepThree :data="user" v-if="stepTwoDone && !stepThreeDone" @complete="submitRegistration" @go-back="stepTwoDone = false" />
@@ -11,6 +12,7 @@
 <script>
 const axios = require('axios')
 import { validateEmail, passwordUnique } from '~/utils/validate.js'
+import Progress from '@/components/Progress.vue'
 import StepOne from '@/components/StepOne.vue'
 import StepTwo from '@/components/StepTwo.vue'
 import StepThree from '@/components/StepThree.vue'
@@ -44,7 +46,8 @@ export default {
         StepTwo,
         StepThree,
         Processing,
-        RegistrationError
+        RegistrationError,
+        Progress
     },
     methods: {
         validateStepOne() {
@@ -146,7 +149,7 @@ export default {
     height: 100vh;
     z-index: 999;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     opacity: 1;
     transition: opacity 1s;

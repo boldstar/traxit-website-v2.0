@@ -1,7 +1,7 @@
 <template>
     <div class="register-content">
         <div class="register-header">
-            <span class="register-title">Free Trial | Step 2</span>
+            <span class="register-title">Free Trial</span>
         </div>
         <div class="register-body">
             <div class="register-details">
