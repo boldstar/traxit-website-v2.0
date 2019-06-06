@@ -11,7 +11,7 @@
                     <g-link class="nav_link" to="/feature/dashboard-feature">How It Works</g-link>
                     <g-link class="nav_link" to="/pricing">Pricing</g-link>
                     <a class="nav_link" href="https://app.traxit.io/login">Login</a>
-                    <button type="button" class="free-btn" @click="showFreeTrialForm">Start Free Trial</button>
+                    <g-link to="/trial" class="free-btn" @click="showFreeTrialForm">Start Free Trial</g-link>
                 </nav>
             </div>
         </div>
@@ -125,6 +125,8 @@ nav {
     font-weight: bold;
     margin-left: 35px;
     transition: background 1s;
+    text-decoration: none;
+    padding: 5px 10px;
 }
 
 .free-btn:hover {

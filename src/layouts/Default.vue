@@ -1,7 +1,6 @@
 <template>
   <div class="layout">
     <Navbar id="navbar"/>
-    <Register v-if="registration" />
     <Success v-if="successModal" @close-modal="closeSuccessModal" />
     <div class="layout-container">
       <transition name="fade" appear>
@@ -30,14 +29,12 @@ import Contact from '@/components/Contact.vue'
 import Who from '@/components/Who.vue'
 import Footer from '@/components/Footer.vue'
 import Success from '@/components/Success.vue'
-import Register from '@/components/Register.vue'
 import {EventBus} from '~/utils/event.js'
 export default {
   name: 'Default',
   data() {
     return {
       successModal: false,
-      registration: false,
     }
   },
   components: {
@@ -46,7 +43,6 @@ export default {
     Footer,
     Success,
     Who,
-    Register
   },
   methods: {
     closeSuccessModal() {
@@ -56,12 +52,6 @@ export default {
   mounted() {
     EventBus.$on('success', () => {
       this.successModal = true
-    })
-    EventBus.$on('close-registration', () => {
-      this.registration = false
-    })
-    EventBus.$on('start-registration', () => {
-      this.registration = true
     })
   },
 }

@@ -1,136 +1,51 @@
 <template>
-  <form 
-    name="free_demo_form"
-    method="post"
-    v-on:submit.prevent="validateBeforeSubmit"
-    action="/success/"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-    class="form"
-  >
-  <p class="slogan">{{slogan}}</p>
-  <input type="hidden" name="form-name" value="contact" />
-  <p hidden>
-    <label>
-      Don’t fill this out: <input name="bot-field" />
-    </label>
-  </p>
-    <div class="input-group">
-      <label for="business_name" class="label" >Business Name</label>
-      <input type="text" name="business_name" v-model="formData.business_name" :class="{'input-error': error && formData.business_name == null}" @change="error = false"/>
-    </div>
-    <div class="input-group">
-      <label for="first_name" class="label" >First Name</label>
-      <input type="text" name="first_name" v-model="formData.first_name" :class="{'input-error': error && formData.first_name == null}" @change="error = false"/>
-    </div>
-    <div class="input-group">
-      <label for="last_name" class="label" >Last Name</label>
-      <input type="text" name="last_name" v-model="formData.last_name" :class="{'input-error': error && formData.last_name == null}" @change="error = false"/>
-    </div>
-    <div class="input-group">
-      <label for="email">Email</label>
-      <input type="email" name="email" v-model="formData.email" :class="{'input-error': error && formData.email == null}" @change="error = false"/>
-    </div>
-    <div class="input-group">
-      <label for="phone">Phone Number</label>
-      <NumberInput type="text" name="phone" v-model="formData.phone" :class="{'input-error': error && formData.phone == null}" @change="error = false" mask-type="number"/>
-    </div>
-  <button type="submit" class="form-btn" :disabled="sending">
-    <span v-if="!sending">Submit</span>
-    <span v-if="sending">Submiting...</span>
-  </button>
-
-
-</form>
+  <form action="https://traxit.us20.list-manage.com/subscribe/post?u=554da9b25bb5346ae99219141&amp;id=d85b539abe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <div class="input-group">
+          <label for="first_name">First Name</label>
+          <input type="text" value="" name="MMERGE1" class="required mailchimp-input" id="mce-MMERGE1" placeholder="First Name" required>
+        </div>
+        <div class="input-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" value="" name="MMERGE2" class="required mailchimp-input" id="mce-MMERGE2" placeholder="Last Name" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input ref="mailchimp" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" class="required mailchimp-input" required>
+        </div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_554da9b25bb5346ae99219141_d85b539abe" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="form-btn"></div>
+      </div>
+  </form>
 </template>
 
 <script>
-import {EventBus} from '~/utils/event.js'
-import NumberInput from '@/components/NumberInput.vue'
 
 export default {
   name: 'Form',
   props: ['slogan'],
-  components: {
-    NumberInput
-  },
   data() {
     return {
-      formData: {
-        business_name: null,
-        first_name: null,
-        last_name: null,
-        email: null,
-        phone: null
-      },
-      success: false,
-      error: false,
-      sending: false
+      
     }
   },
- methods: {
-  validateBeforeSubmit(e) {
-    for( var key in this.formData) {
-      if(this.formData[key] == null || this.formData[key] == '') {
-        this.error = true
-        return
-      }
-    }
-    this.handleSubmit(e)
-  },
-  encode(data) {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-  },
-  handleSubmit(e) {
-    this.sending = true
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: this.encode({
-        'form-name': e.target.getAttribute('name'),
-        ...this.formData,
-      }),
-    })
-    .then(() => {
-      this.sending = false
-      this.formData = ""
-      this.$router.push('/')
-      this.success = true
-      EventBus.$emit('form-submitted')
-      EventBus.$emit('success')
-      window.scrollTo(0,0)
-    })
-    .catch(error => alert(error))
-  },
-  removeModal() {
-    this.success = false
+  methods: {
+  
   }
-}
 }
 </script>
 
 <style>
-  .success-modal {
-    position: absolute;
-    top:0;
-    left: 0;
-  }
 
   .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
     box-shadow: 0 2px 15px 8px rgba(0, 0, 0, 0.164); 
     padding: 15px;
     border-radius: 5px;
     background: var(--white);
-  }
-
-  .hidden {
-    display: none;
   }
 
   input {
@@ -139,7 +54,8 @@ export default {
     border-radius: 3px;
     margin-bottom: 10px;
     font-size: 1.1rem;
-    width: 95%;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .form-btn {
@@ -155,36 +71,19 @@ export default {
     box-shadow: 0 0 5px 0 rgba(0,0,0,.25)
   }
 
-  .slogan {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 0;
-  }
-
-  .input-error {
-    border: 1px solid red!important;
-  }
-
   .input-group {
-    width: 100%;
+    width: 500px;
   }
 
   @media screen and (max-width: 950px) {
-      .form {
+      .input-group {
           max-width: 400px;
       }
   }
 
-  @media screen and (max-width: 767px) {
-    .slogan {
-      font-size: 1rem;
-    }
-  }
-
   @media screen and (max-width: 458px) {
-    .form {
-      width: 90%;
+    .input-group {
+      width: 100%;
     }
   }
 </style>

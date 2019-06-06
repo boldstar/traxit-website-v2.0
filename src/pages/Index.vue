@@ -21,7 +21,7 @@
           </ClientOnly>
           <h1 class="hero-title">Workflow</h1>
           <h1 class="hero-title">Management</h1>
-          <button class="hero-btn" type="button" @click="showForm">Start Free Trial</button>
+          <g-link to="/trial" class="hero-btn" @click="showForm">Start Free Trial</g-link>
         </div>
         <HeroImg class="hero-img" />
         <g-image src="../../static/mobile_hero_illustration.png" class="mobile-hero"></g-image>
@@ -137,12 +137,13 @@ export default {
   border-radius: 5px;
   box-shadow: 0 0 5px 0 var(--darkgray);
   color: var(--main);
-  height: 50px;
-  width: 200px;
+  padding: 10px 30px;
+  width: 145px;
   font-size: 1.25rem;
   margin-top: 35px;
   margin-left: 5px;
   transition: background 1s;
+  text-decoration: none;
 }
 
 .hero-btn:hover {

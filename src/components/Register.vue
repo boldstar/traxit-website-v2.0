@@ -142,18 +142,15 @@ export default {
 <style>
 
 .register {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100vh;
     z-index: 999;
-    background: rgba(0, 0, 0, 0.178);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
     transition: opacity 1s;
+    background-color: var(--lightgray);
 }
 
 .register-content {
@@ -221,6 +218,7 @@ input.register-input {
     color: var(--white);
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .cancel {
