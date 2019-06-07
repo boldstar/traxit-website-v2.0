@@ -138,12 +138,14 @@ export default {
   box-shadow: 0 0 5px 0 var(--darkgray);
   color: var(--main);
   padding: 10px 30px;
-  width: 145px;
+  display: inline-block;
   font-size: 1.25rem;
   margin-top: 35px;
   margin-left: 5px;
+  width: 135px;
   transition: background 1s;
   text-decoration: none;
+  text-align: center;
 }
 
 .hero-btn:hover {

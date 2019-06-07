@@ -206,6 +206,10 @@ nav {
         align-self: center!important;
         margin-bottom: 0!important;
     }
+
+    .free-btn {
+        height: 25px;
+    }
 }
 
 </style>

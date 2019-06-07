@@ -7,13 +7,13 @@
                 <div>
                     <dot class="dot"></dot>
                 </div>
-                <p class="mission-text">We believe that to take your business to the next level, and make better decisions for the future you need an application that will provide you the ability to manage, track, assign and report on whatever the job may be.</p>
+                <p class="mission-text">Workflow management for small businesses such as CPAs, EAs, Bookkeepers, Tax preparers and more is critical for organized success plus staying on top of what is happening for quick and better decision making.</p>
             </div>
             <div class="mission-statement">
                 <div>
                     <dot class="dot"></dot>
                 </div>
-                <p class="mission-text">We want to impower you with the ability to manage what's important with our simple, intuitive practice management software.</p>
+                <p class="mission-text">With TRAXIT you can count on always being aware of what is actually happening with our easy to use, intuitive dashboard along with workflow flow overviews of all engagements and who is currently assigned to them.</p>
             </div>
             <div class="mission-statement">
                 <div>
