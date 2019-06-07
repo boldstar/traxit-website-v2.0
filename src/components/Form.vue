@@ -15,7 +15,7 @@
         </div>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_554da9b25bb5346ae99219141_d85b539abe" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="form-btn"></div>
+          <div class="clear"><input type="submit" value="Get Demo" name="subscribe" id="mc-embedded-subscribe" class="form-btn"></div>
       </div>
   </form>
 </template>

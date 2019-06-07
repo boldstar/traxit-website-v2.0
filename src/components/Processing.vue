@@ -3,8 +3,8 @@
         <h4 class="processing-header">Building Your Account</h4>
         <div class="processing">
             <div class="processing-bar" v-bind:style="{ width: progress + '%'}">
-            <span class="progress" v-if="!done">{{ progress + '%' }}</span>
-            <span class="progress" v-if="done">Almost Done</span>
+            <span class="progress-text" v-if="!done">{{ progress + '%' }}</span>
+            <span class="progress-text" v-if="done">Almost Done</span>
             </div>
         </div>
     </div>
@@ -57,10 +57,9 @@ export default {
 
 .processing-header {
     margin: 0 auto;
-    position: absolute;
-    left: 25%;
-    top: 175px;
     font-size: 2rem;
+    position: relative;
+    top: 200px;
 }
 
 .processing-bar {
@@ -72,7 +71,7 @@ export default {
     transition: width 1s;
 }
 
-.progress {
+.progress-text {
     position: relative;
     left: 45%;
     top: 5px;
@@ -87,6 +86,14 @@ export default {
 
     .processing-header {
         font-size: 1rem;
+        top: 250px;
+    }
+
+    .progress-text {
+        position: relative;
+        left: 35%;
+        top: 5px;
+        font-weight: bold;
     }
 }
 </style>

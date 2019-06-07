@@ -37,23 +37,36 @@ export default {
     color: white;
     text-align: center;
     position: relative;
-    z-index: 1;
-    transition: background .3s ease-out;
 }
 
 .step:after {
+    content: "";
+    width: 0;
+    height: 10px;
+    background: var(--main);
+    display: block;
+    position: absolute;
+    top: 20px;
+    z-index: -1;
+    transition: width 1s ease-out;
+}
+
+.step:before {
     content: "";
     width: 300px;
     height: 10px;
     background: var(--darkgray);
     display: block;
-    position: relative;
+    position: absolute;
     top: 20px;
-    z-index: 0;
-    transition: background .3s ease-out;
+    z-index: -2;
 }
 
 .step:last-of-type:after {
+    display: none;
+}
+
+.step:last-of-type:before {
     display: none;
 }
 
@@ -68,10 +81,63 @@ export default {
 
 .step-complete:after {
     background: var(--main);
+    width: 300px;
 }
 
 .step-complete {
     background: var(--main);
+}
+
+@media screen and (max-width: 650px) {
+    .progress {
+        width: 90%;
+    }
+
+    .step:before {
+        width: 275px;
+    }
+
+    .step-complete:after {
+        background: var(--main);
+        width: 275px;
+    }
+}
+
+@media screen and (max-width: 562px) {
+    .step:before {
+        width: 245px;
+    }
+
+    .step-complete:after {
+        background: var(--main);
+        width: 245px;
+    }
+}
+
+@media screen and (max-width: 493px) {
+    .progress {
+        margin: 10px auto;
+    }
+
+    .step:before {
+        width: 200px;
+    }
+
+    .step-complete:after {
+        background: var(--main);
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    .step:before {
+        width: 160px;
+    }
+
+    .step-complete:after {
+        background: var(--main);
+        width: 160px;
+    }
 }
 
 </style>

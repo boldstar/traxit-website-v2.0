@@ -145,21 +145,22 @@ export default {
 <style>
 
 .register {
+    position: relative;
     width: 100%;
     height: 100vh;
-    z-index: 999;
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 1;
     transition: opacity 1s;
     background-color: var(--lightgray);
+    z-index: 1;
 }
 
 .register-content {
-    position: relative;
     margin: 0 auto;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     background: white;
     box-shadow: 0 0 5px 0 rgba(0,0,0,.25);
     border-radius: 5px;
@@ -240,34 +241,30 @@ input.register-input {
     flex-direction: column;
 }
 
- @media screen and (max-width: 950px) {
-        .register-content {
-            max-width: 400px;
-            height: 550px;
-            width: 90%;
-        }
+  @media screen and (max-width: 650px) {
 
-        input.register-input {
-            width: 100%;
-        }
-
-  }
-
-  @media screen and (max-width: 450px) {
-      .register-btn {
+    .register-btn {
         font-size: 1.0rem;
     }
 
      .register-content {
-            max-width: 400px;
-            height: 550px;
-            width: 90%;
-            overflow: hidden;
-            margin-top: 50px;
+        height: 500px;
+        width: 90%;
+        overflow: hidden;
     }
 
     .register-header {
         display: none;
     }
+
+    input.register-input {
+        width: 100%;
+    }
+
+    .register-details-text {
+        background: var(--lightgray);
+        font-size: .7rem;
+    }
+
   }
 </style>
