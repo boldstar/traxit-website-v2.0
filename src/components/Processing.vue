@@ -86,7 +86,7 @@ export default {
 
     .processing-header {
         font-size: 1rem;
-        top: 250px;
+        top: 200px;
     }
 
     .progress-text {
