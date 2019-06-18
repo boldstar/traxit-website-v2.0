@@ -36,7 +36,9 @@
                         <Checkmark class="checkmark" />
                     </li>
                 </ul>
-                <button type="button" class="pricing-btn" @click="showForm">Start Free Trial Now</button>
+                <div class="pricing-btns">
+                    <g-link to="/trial" class="pricing-btn" >Start Free Trial Now</g-link>
+                </div>
             </div>
             <Subscription class="subscription" />
         </div>
@@ -131,6 +133,10 @@ ul {
     color: var(--main);
 }
 
+.pricing-btns {
+    margin-top: 10px;
+}
+
 .pricing-btn {
     padding: 10px;
     background: var(--main);
@@ -142,7 +148,10 @@ ul {
     width: 100%;
     cursor: pointer;
     box-shadow: 0 0 5px 0 rgba(0,0,0,.25);
-    margin-top: 10px;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .subscription {

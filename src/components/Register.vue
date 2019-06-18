@@ -1,5 +1,6 @@
 <template>
     <div class="register">
+        <Progress :stepOne="stepOneDone" :stepTwo="stepTwoDone" :stepThree="stepThreeDone" />
         <StepOne :data="business" :errors="errorArray" @step-one-complete="validateStepOne" @change="clearErrors" v-if="!stepOneDone && !stepThreeDone" />
         <StepTwo :data="user" :errors="errorArray"  @next-step="validateStepTwo" @change="clearErrors" @go-back="stepOneDone = false" v-if="stepOneDone && !stepTwoDone"/>
         <StepThree :data="user" v-if="stepTwoDone && !stepThreeDone" @complete="submitRegistration" @go-back="stepTwoDone = false" />
@@ -11,6 +12,7 @@
 <script>
 const axios = require('axios')
 import { validateEmail, passwordUnique } from '~/utils/validate.js'
+import Progress from '@/components/Progress.vue'
 import StepOne from '@/components/StepOne.vue'
 import StepTwo from '@/components/StepTwo.vue'
 import StepThree from '@/components/StepThree.vue'
@@ -44,7 +46,8 @@ export default {
         StepTwo,
         StepThree,
         Processing,
-        RegistrationError
+        RegistrationError,
+        Progress
     },
     methods: {
         validateStepOne() {
@@ -142,24 +145,22 @@ export default {
 <style>
 
 .register {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 100vh;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.178);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     opacity: 1;
     transition: opacity 1s;
+    background-color: var(--lightgray);
+    z-index: 1;
 }
 
 .register-content {
-    position: relative;
     margin: 0 auto;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     background: white;
     box-shadow: 0 0 5px 0 rgba(0,0,0,.25);
     border-radius: 5px;
@@ -188,7 +189,7 @@ export default {
 
 input.register-input {
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
 }
 
 .register-details {
@@ -221,6 +222,7 @@ input.register-input {
     color: var(--white);
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .cancel {
@@ -239,35 +241,30 @@ input.register-input {
     flex-direction: column;
 }
 
- @media screen and (max-width: 950px) {
-        .register-content {
-            max-width: 400px;
-            height: 550px;
-            width: 90%;
-        }
+  @media screen and (max-width: 650px) {
 
-        input.register-input {
-            width: 95%;
-            max-width: 350px;
-        }
-
-  }
-
-  @media screen and (max-width: 450px) {
-      .register-btn {
+    .register-btn {
         font-size: 1.0rem;
     }
 
      .register-content {
-            max-width: 400px;
-            height: 550px;
-            width: 90%;
-            overflow: hidden;
-            margin-top: 50px;
+        height: 500px;
+        width: 90%;
+        overflow: hidden;
     }
 
     .register-header {
         display: none;
     }
+
+    input.register-input {
+        width: 100%;
+    }
+
+    .register-details-text {
+        background: var(--lightgray);
+        font-size: .7rem;
+    }
+
   }
 </style>

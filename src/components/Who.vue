@@ -33,7 +33,7 @@ export default {
     },
     data() {
         return {
-            text: ["CPA's", "EA's", "Tax Preparers", "Bookkeepers", "Accountants"]
+            text: ["CPAs", "EAs", "Tax Preparers", "Bookkeepers", "Accountants"]
         }
     }
 }

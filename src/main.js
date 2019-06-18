@@ -14,4 +14,10 @@ export default function (Vue, { router, head, isClient }) {
     href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
   })
 
+  head.link.push({
+    href: "//cdn-images.mailchimp.com/embedcode/slim-10_7.css", 
+    rel: "stylesheet", 
+    type: "text/css"
+  })
+
 }

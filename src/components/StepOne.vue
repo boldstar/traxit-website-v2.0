@@ -1,7 +1,7 @@
 <template>
     <div class="register-content">
         <div class="register-header">
-            <span class="register-title">Free Trial | Step 1</span>
+            <span class="register-title">Free Trial</span>
         </div>
         <div class="register-body">
             <div class="register-details">
@@ -17,8 +17,7 @@
             </form>
         </div>
         <div class="register-footer">
-            <button type="button" class="register-btn cancel" @click="closeRegistration">Cancel</button>
-            <button type="button" class="register-btn" @click="nextStep">Next</button>
+            <button type="button" class="register-btn step-one-btn" @click="nextStep">Next</button>
         </div>
     </div>
 </template>
@@ -49,9 +48,6 @@ export default {
          setCurrentValue (business) {
             this.business = business
         },
-        closeRegistration() {
-            EventBus.$emit('close-registration')
-        },
         nextStep() {
             this.$emit('step-one-complete')
         }
@@ -75,5 +71,9 @@ export default {
 
     .text-error {
         color: red;
+    }
+
+    .step-one-btn {
+        margin-left: auto;
     }
 </style>
