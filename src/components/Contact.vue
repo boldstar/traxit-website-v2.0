@@ -5,7 +5,7 @@
             <div class="contact-body">
                 <div class="contact-details">
                     <h2 class="contact-details-header">Would you like a demo?</h2>
-                    <p>Feel free to fill out the form on the right and we will send you a FREE on-demand webinar! If you feel like you are ready to start your free trial now <g-link to="/trial" class="register-btn">Click Here</g-link></p>
+                    <p>Feel free to fill out the form on the right and we will send you a FREE on-demand webinar! If you feel like you are ready to start your free trial now <g-link to="/trial" class="contact-trial-btn">Click Here</g-link></p>
                      <g-image src="../../static/img/Arrow.png" width="250" class="arrow"></g-image>
                 </div>
                 <Form />
@@ -76,6 +76,11 @@ export default {
         position: absolute;
         left: 150px;
         bottom: 10px;
+    }
+
+    .contact-trial-btn {
+        text-decoration: none;
+        color: var(--main);
     }
 
     

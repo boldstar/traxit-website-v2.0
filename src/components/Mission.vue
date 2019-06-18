@@ -7,13 +7,13 @@
                 <div>
                     <dot class="dot"></dot>
                 </div>
-                <p class="mission-text">Workflow management for small businesses such as CPAs, EAs, Bookkeepers, Tax preparers and more is critical for organized success plus staying on top of what is happening for quick and better decision making.</p>
+                <p class="mission-text">Workflow management for small businesses such as CPAs, EAs, Bookkeepers, Tax preparers and more is critical for organized success. Our mission is to provide easy to use software for managing the backend of your firm while providing transparency and awareness for you and your customers.</p>
             </div>
             <div class="mission-statement">
                 <div>
                     <dot class="dot"></dot>
                 </div>
-                <p class="mission-text">With TRAXIT you can count on always being aware of what is actually happening with our easy to use, intuitive dashboard along with workflow flow overviews of all engagements and who is currently assigned to them.</p>
+                <p class="mission-text">With TRAXIT you can count on always being aware of what is actually happening with our easy to use, intuitive dashboard along with workflow overviews of all engagements and who is currently assigned to them.</p>
             </div>
             <div class="mission-statement">
                 <div>

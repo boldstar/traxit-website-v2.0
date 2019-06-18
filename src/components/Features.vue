@@ -76,7 +76,7 @@ export default {
 
     .features-layout {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 20px auto;
         width: 100%;
         padding: 20px;

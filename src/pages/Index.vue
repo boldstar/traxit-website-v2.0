@@ -21,7 +21,10 @@
           </ClientOnly>
           <h1 class="hero-title">Workflow</h1>
           <h1 class="hero-title">Management</h1>
-          <g-link to="/trial" class="hero-btn" @click="showForm">Start Free Trial</g-link>
+          <div class="hero-btns">
+            <g-link to="/trial" class="hero-btn" @click="showForm">Start Free Trial</g-link>
+            <a href="https://webinar.traxit.io" class="hero-demo-btn">Get Demo</a>
+          </div>
         </div>
         <HeroImg class="hero-img" />
         <g-image src="../../static/mobile_hero_illustration.png" class="mobile-hero"></g-image>
@@ -148,10 +151,32 @@ export default {
   text-align: center;
 }
 
+.hero-demo-btn {
+  background: var(--main);
+  border: .5px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 black;
+  color: white;
+  padding: 10px 30px;
+  display: inline-block;
+  font-size: 1.25rem;
+  margin-top: 35px;
+  margin-left: 5px;
+  width: 135px;
+  transition: background 1s;
+  text-decoration: none;
+  text-align: center;
+}
+
 .hero-btn:hover {
-    margin-top: 37px;
     cursor: pointer;
     background: var(--lightgray);
+    box-shadow: 0 0 10px 0 var(--main);
+}
+
+.hero-demo-btn:hover {
+    cursor: pointer;
+    background: #2a8dff;
     box-shadow: 0 0 10px 0 var(--main);
 }
 
@@ -192,7 +217,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1250px) {
   .hero-img {
     max-width: 500px;
     right: 50px;
@@ -219,7 +244,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 1000px) {
   .hero-content {
     flex-direction: column-reverse;
     min-height: calc(100vh - 50px);
@@ -266,6 +291,18 @@ export default {
     font-weight: bold;
     margin: 0;
     height: 40px;
+  }
+
+  .hero-btn {
+    width: 90px;
+    font-size: .8rem;
+    padding: 10px;
+  }
+
+  .hero-demo-btn {
+    width: 90px;
+    font-size: .8rem;
+    padding: 10px;
   }
 }
 
