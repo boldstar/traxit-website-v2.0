@@ -59,16 +59,16 @@ export default {
   }
 
   .form-btn {
-    padding: 10px;
-    background: var(--main);
-    color: white;
-    font-weight: bold;
-    font-size: 1.25rem;
-    border: none;
-    border-radius: 3px;
-    width: 100%;
-    cursor: pointer;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,.25)
+    padding: 10px!important;
+    background: var(--main)!important;
+    color: white!important;
+    font-weight: bold!important;
+    font-size: 1.25rem!important;
+    border: none!important;
+    border-radius: 3px!important;
+    width: 100%!important;
+    cursor: pointer!important;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.25)!important;
   }
 
   .input-group {
