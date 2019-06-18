@@ -6,10 +6,10 @@
 
 
 module.exports = {
+  siteUrl: 'https://traxit.io',
   siteName: 'TRAXIT',
-
-    chainWebpack: config => {
-      const svgRule = config.module.rule('svg')
+  chainWebpack: config => {
+    const svgRule = config.module.rule('svg')
       svgRule.uses.clear()
       svgRule
         .use('vue-svg-loader')
