@@ -2,5 +2,3 @@ User-agent: *
 Disallow: /terms
 Disallow: /privacy
 Disallow: /refunds
-Disallow: /feature/
-Disallow: /pricing

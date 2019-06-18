@@ -38,5 +38,34 @@ module.exports = {
         }
       }
     },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: ['/refunds', '/privacy', 'terms'],
+        config: {
+          '/trial': {
+            changefreq: 'monthly',
+            priority: 0.1
+          },
+          '/feature/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/pricing': {
+            changefreq: 'monthly',
+            priority: 0.5
+          },
+          '/about': {
+            changefreq: 'monthly',
+            priority: 0.7
+          },
+          '/': {
+            changefreq: 'monthly',
+            priority: 1.0
+          },
+        }
+      }
+    }
   ]
 }
